@@ -1,0 +1,7 @@
+services:
+  - type: web
+    runtime: static
+    name: coalizao-ia-para-impacto
+    buildCommand: ""
+    staticPublishPath: .
+    autoDeploy: true
