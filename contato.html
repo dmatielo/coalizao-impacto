@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — Coalizão IA para Impacto</title>
+  <meta name="description" content="Entre em contato com a Coalizão IA para Impacto — para organizações, financiadores e interessados em participar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/coalizao.css">
+  <style>
+    .contact-wrap {
+      max-width: 44rem;
+      margin: 0 auto;
+    }
+    .contact-form {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      padding: 2.5rem;
+    }
+    .form-field { margin-bottom: 1.4rem; }
+    .form-field label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .form-field label .req { color: var(--coral); }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid var(--lavanda-border);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1rem;
+    }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      outline: 3px solid var(--lavanda-tint);
+      border-color: var(--lavanda);
+    }
+    .form-field textarea { min-height: 140px; resize: vertical; }
+    .form-consent {
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      margin-bottom: 1.6rem;
+    }
+    .form-consent input { margin-top: 0.25rem; }
+    .form-note {
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      margin-top: 1rem;
+    }
+    .form-status {
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.4rem;
+      font-weight: 700;
+    }
+    .form-status.ok { background: rgba(27, 126, 90, 0.12); color: #1B7E5A; }
+    .form-status.err { background: var(--coral-tint); color: var(--coral-dark); }
+  </style>
+</head>
+<body>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="index.html" aria-label="Coalizão IA para Impacto — página inicial">
+        <img src="assets/branco_logo_coalizao-ia-para-impacto.png" alt="Coalizão IA para Impacto">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#como-atuamos">Como Atuamos</a></li>
+        <li><a href="index.html#organizacoes">Para Organizações</a></li>
+        <li><a href="index.html#financiadores">Para Financiadores</a></li>
+        <li><a href="contato.html" aria-current="page">Contato</a></li>
+      </ul>
+      <a class="btn btn-primary" href="contato.html">Participar</a>
+    </nav>
+  </header>
+
+  <!-- ============ Hero compacto ============ -->
+  <section class="hero" style="padding: 3.5rem 0 6rem;">
+    <div class="container">
+      <span class="eyebrow">Contato</span>
+      <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem);">Vamos conversar</h1>
+      <p class="lead">
+        Quer participar da Coalizão, apoiar como financiador(a) ou fazer uma
+        parceria? Conte para a gente quem você é — respondemos pelo e-mail
+        que você informar.
+      </p>
+    </div>
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none">
+        <path d="M0,40 C240,70 480,0 720,20 C960,40 1200,70 1440,30 L1440,70 L0,70 Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ Formulário ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-wrap">
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <!-- TODO: substituir pela chave real gerada em https://web3forms.com (gratuito, só informar o e-mail de destino) -->
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+          <input type="hidden" name="subject" value="Novo contato pelo site da Coalizão IA para Impacto">
+          <input type="hidden" name="from_name" value="Site Coalizão IA para Impacto">
+          <!-- Honeypot anti-spam: humanos não veem este campo -->
+          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off">
+
+          <div class="form-status ok" id="status-ok" hidden>
+            Mensagem enviada! Obrigado pelo interesse — retornaremos em breve.
+          </div>
+          <div class="form-status err" id="status-err" hidden>
+            Não foi possível enviar. Tente novamente em instantes, por favor.
+          </div>
+
+          <div class="form-field">
+            <label for="name">Nome <span class="req">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+
+          <div class="form-field">
+            <label for="email">E-mail <span class="req">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+
+          <div class="form-field">
+            <label for="organization">Organização</label>
+            <input type="text" id="organization" name="organizacao" autocomplete="organization">
+          </div>
+
+          <div class="form-field">
+            <label for="profile">Você é... <span class="req">*</span></label>
+            <select id="profile" name="perfil" required>
+              <option value="" disabled selected>Selecione</option>
+              <option>Organização da sociedade civil</option>
+              <option>Negócio ou startup de impacto</option>
+              <option>Financiador(a) / filantropia / investidor(a)</option>
+              <option>Governo</option>
+              <option>Academia e pesquisa</option>
+              <option>Especialista em tecnologia</option>
+              <option>Rede ou intermediário</option>
+              <option>Imprensa</option>
+              <option>Outro</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Mensagem <span class="req">*</span></label>
+            <textarea id="message" name="mensagem" required
+              placeholder="Conte brevemente o seu interesse: participar da comunidade, apoiar financeiramente, propor parceria..."></textarea>
+          </div>
+
+          <label class="form-consent">
+            <input type="checkbox" name="consentimento" value="sim" required>
+            <span>
+              Autorizo o uso destes dados para que a Coalizão responda ao meu contato e,
+              se eu manifestar interesse em participar, me envie informações sobre as
+              atividades da rede. Os dados não serão compartilhados com terceiros nem
+              usados para outra finalidade. <span class="req">*</span>
+            </span>
+          </label>
+
+          <button type="submit" class="btn btn-primary" id="submit-btn">Enviar mensagem</button>
+
+          <p class="form-note">Campos marcados com <span class="req">*</span> são obrigatórios.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img class="footer-logo" src="assets/branco_logo_coalizao-ia-para-impacto.png" alt="Coalizão IA para Impacto">
+          <p style="font-size:0.95rem;max-width:28rem;">
+            Uma articulação brasileira para destravar o uso estratégico, ético e
+            inclusivo da inteligência artificial no setor de impacto.
+          </p>
+        </div>
+        <div>
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="index.html#sobre">Sobre</a></li>
+            <li><a href="index.html#como-atuamos">Como Atuamos</a></li>
+            <li><a href="index.html#organizacoes">Para Organizações</a></li>
+            <li><a href="index.html#financiadores">Para Financiadores</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ecossistema</h4>
+          <ul>
+            <li><a href="https://jornadadeimpacto.ia.br/" target="_blank" rel="noopener">Cérebro da Jornada</a></li>
+            <li><a href="https://jornadadeimpacto.ia.br/" target="_blank" rel="noopener">Jornada IA para Impacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Coalizão IA para Impacto · Continuidade da Jornada IA para Impacto
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const ok = document.getElementById('status-ok');
+    const err = document.getElementById('status-err');
+    const btn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      ok.hidden = true; err.hidden = true;
+      btn.disabled = true; btn.textContent = 'Enviando...';
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          ok.hidden = false;
+          ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          err.hidden = false;
+        }
+      } catch (_) {
+        err.hidden = false;
+      } finally {
+        btn.disabled = false; btn.textContent = 'Enviar mensagem';
+      }
+    });
+  </script>
+
+</body>
+</html>
