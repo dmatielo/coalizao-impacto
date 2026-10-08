@@ -22,6 +22,8 @@ Tipografia: **Calibri** — na web usamos **Carlito** (Google Fonts, metricament
 
 Logo: 7 variações de cor em `07-identidade-visual/logo-coalizao/PNG/`. No site: versão branca sobre navy (header, footer, hero) e versão azul sobre fundo claro.
 
+Insígnia (hexágono-nó): embutida como `<symbol id="insignia">` no topo de cada página; use `<svg class="insignia"><use href="#insignia"/></svg>`. Cor via `color` (herda por `currentColor`) e as 6 rotações oficiais via classes `rot-60` ... `rot-300`. Nos cards, envolva em `.card-icon` com as cores `coral|lavanda|navy|verde|amarelo`.
+
 ## Fontes de conteúdo (pasta compartilhada `Coalizão IA para o Impacto`)
 
 - O que é / vocabulário (Raiz, Tronco, Copa): `CLAUDE.md` e `00-comece-aqui/glossario.md`
