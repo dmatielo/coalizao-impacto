@@ -5,10 +5,18 @@ Páginas do site da **Coalizão IA para Impacto**, construídas com a identidade
 ## Estrutura
 
 ```
-index.html          → Home da Coalizão (organizações + financiadores)
-css/coalizao.css    → Design system compartilhado (usar em todas as novas páginas)
-assets/             → Logos oficiais (copiados de 07-identidade-visual/logo-coalizao/)
+index.html            → Home da Coalizão (organizações + financiadores)
+contato.html          → Formulário de contato (Web3Forms → admin@iaparaimpacto.org.br)
+barreiras.html        → Diagnóstico da Jornada: 3 macrodimensões, 12 barreiras
+alavancas.html        → As 6 alavancas
+recomendacoes.html    → Recomendações priorizadas (sanfonas por frente)
+relatorio.html        → Relatório final (PDF embutido do Google Drive)
+css/coalizao.css      → Design system compartilhado (usar em todas as páginas)
+assets/icons.svg      → Sprite único: insígnia + ícones temáticos (<use href="assets/icons.svg#i-...">)
+assets/               → Logos, fotos do time, favicons
 ```
+
+O conteúdo das quatro páginas do diagnóstico é replicado de jornadadeimpacto.ia.br. Cabeçalho e rodapé são repetidos em cada página: ao mudar o menu, atualize todas.
 
 ## Identidade visual (fonte: `07-identidade-visual/` da pasta compartilhada)
 
