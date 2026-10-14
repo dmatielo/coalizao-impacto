@@ -592,6 +592,183 @@ a { color: inherit; }
 .funders-list h3 { margin: 0 0 0.15rem; font-size: 1.08rem; color: var(--white); }
 .funders-list p { margin: 0; color: var(--white-70); font-size: 0.95rem; }
 
+/* ---------- Chamada "quer entender mais?" na home ---------- */
+.more-link {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.02rem;
+  color: var(--ink-soft);
+}
+.more-link a {
+  color: var(--coral-dark);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.more-link a:hover { text-decoration: underline; }
+.section.dark .more-link { color: var(--white-70); }
+
+.link-list { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 0.4rem; }
+.link-list a { color: var(--navy); font-weight: 700; text-decoration: none; }
+.link-list a:hover { color: var(--coral-dark); }
+.link-list a::before { content: '→ '; color: var(--coral); }
+
+/* ---------- Subpáginas do diagnóstico ---------- */
+.page-hero { padding: 3.5rem 0 6rem; }
+.page-hero h1 { font-size: clamp(1.9rem, 4.2vw, 2.9rem); }
+
+.subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: -2.75rem auto 0;
+  position: relative;
+  z-index: 2;
+}
+.subnav a {
+  background: var(--white);
+  border: 1px solid var(--lavanda-border);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-card);
+  padding: 0.6rem 1.2rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--navy);
+}
+.subnav a:hover { border-color: var(--coral); }
+.subnav a[aria-current="page"] { background: var(--navy); color: var(--white); border-color: var(--navy); }
+
+.source-note {
+  max-width: 52rem;
+  margin: 0 auto 3rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--white);
+  border: 1px solid var(--lavanda-border);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.4rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+.source-note .card-icon { width: 40px; height: 40px; flex: 0 0 auto; }
+.source-note .card-icon .ico { width: 20px; height: 20px; }
+.source-note a { color: var(--navy); font-weight: 700; }
+
+.prose-narrow { max-width: 52rem; margin: 0 auto; }
+.prose-narrow p { color: var(--ink-soft); }
+
+/* Barreiras por macrodimensão */
+.macro {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  padding: 2.25rem 0;
+  border-top: 1px solid var(--lavanda-border);
+}
+.macro:first-of-type { border-top: none; }
+@media (max-width: 800px) { .macro { grid-template-columns: 1fr; gap: 1rem; } }
+.macro-head .num {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--coral);
+}
+.macro-head h2 { font-size: 1.5rem; line-height: 1.2; margin: 0.3rem 0 0; }
+.macro-items { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+@media (max-width: 800px) { .macro-items { grid-template-columns: 1fr; } }
+.macro-items .item {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: 1.1rem 1.25rem;
+}
+.macro-items h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+.macro-items p { margin: 0; font-size: 0.95rem; color: var(--ink-soft); line-height: 1.5; }
+
+/* Alavancas */
+.lever-list { display: grid; gap: 1.25rem; max-width: 60rem; margin: 0 auto; }
+.lever {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 1.6rem 1.75rem;
+}
+.lever h2 { font-size: 1.3rem; margin: 0 0 0.5rem; }
+.lever p { margin: 0; color: var(--ink-soft); }
+@media (max-width: 600px) { .lever { grid-template-columns: 1fr; } }
+
+/* Recomendações em sanfona */
+.rec-group { max-width: 56rem; margin: 0 auto 2.5rem; }
+.rec-group > h2 {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin: 0 0 0.8rem;
+}
+.rec {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 0.75rem;
+  border-left: 4px solid var(--lavanda);
+}
+.rec summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.1rem 3rem 1.1rem 1.4rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  position: relative;
+}
+.rec summary::-webkit-details-marker { display: none; }
+.rec summary::after {
+  content: '+';
+  position: absolute;
+  right: 1.3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--coral);
+  font-weight: 400;
+}
+.rec[open] summary::after { content: '−'; }
+.rec[open] { border-left-color: var(--coral); }
+.rec .rec-body { padding: 0 1.4rem 1.3rem; }
+.rec .rec-body p { color: var(--ink-soft); margin: 0 0 0.8rem; }
+.rec .rec-meta {
+  background: var(--paper);
+  border-radius: var(--radius-md);
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+}
+.rec .rec-meta strong { color: var(--navy); }
+
+/* Relatório */
+.report-embed {
+  max-width: 60rem;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+.report-embed iframe { display: block; width: 100%; height: 78vh; min-height: 520px; border: 0; }
+
 /* ---------- Mural de logos (quem faz parte) ---------- */
 .logo-wall {
   display: grid;
@@ -754,7 +931,7 @@ a { color: inherit; }
 
 .site-footer .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 2rem;
   margin-bottom: 2rem;
   align-items: start;
