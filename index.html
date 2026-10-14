@@ -22,11 +22,31 @@
 </head>
 <body>
 
-  <!-- Insígnia da marca (símbolo reutilizável) -->
+  <!-- Insígnia da marca + ícones temáticos -->
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
     <symbol id="insignia" viewBox="0 0 851.42 972">
       <path d="M833.42,229.83L443.71,4.83c-11.14-6.43-24.86-6.43-36,0L18,229.83c-11.14,6.42-18,18.32-18,31.17v450c0,12.86,6.86,24.75,18,31.17l389.71,225c1.08.63,2.21,1.14,3.33,1.64.29.13.55.29.84.41,1.9.79,3.86,1.36,5.84,1.81.53.12,1.06.22,1.6.32,2.12.38,4.25.64,6.39.64s4.27-.26,6.39-.64c.54-.1,1.07-.2,1.6-.32,1.98-.45,3.94-1.02,5.84-1.81.29-.12.55-.29.84-.41,1.12-.5,2.25-1.01,3.33-1.64l389.72-225c11.14-6.42,18-18.32,18-31.17v-450c0-12.86-6.86-24.75-18-31.17ZM72,324.1l242.32,141.39c-1.22,6.66-1.95,13.5-1.95,20.51,0,49.91,32.46,92.29,77.34,107.38v280.26l-317.71-183.43v-366.11ZM425.71,527.34c-22.8,0-41.34-18.54-41.34-41.34s18.54-41.35,41.34-41.35,41.34,18.55,41.34,41.35-18.54,41.34-41.34,41.34ZM779.42,690.21l-317.72,183.43v-280.26c44.88-15.09,77.34-57.48,77.34-107.38,0-62.5-50.84-113.35-113.34-113.35-29.46,0-56.25,11.39-76.42,29.89l-241.92-141.16L425.71,77.57l353.72,204.21v408.43Z"/>
     </symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/><circle cx="17" cy="9" r="2.5"/><path d="M16.5 13.6c3 .3 5 2.8 5 5.9"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3v5h5"/><path d="M8.5 13h7M8.5 17h5"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9.5 12 5l10 4.5-10 4.5z"/><path d="M6 11.3V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.7"/><path d="M22 9.5V15"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.6.5 1.1 1.3 1.1 2.2h5c0-.9.5-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></symbol>
+    <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h3l8 4V5L7 9H4a1 1 0 0 0-1 1z"/><path d="M18.5 9a4.5 4.5 0 0 1 0 6"/><path d="M7 15l1.5 5h2.5l-1-4.2"/></symbol>
+    <symbol id="i-voice-off" viewBox="0 0 24 24"><path d="M3 10v4a1 1 0 0 0 1 1h3l8 4V5L7 9H4a1 1 0 0 0-1 1z"/><path d="M18 9l4 6M22 9l-4 6"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.5M8.2 13.2l7.6 4.5"/></symbol>
+    <symbol id="i-unlink" viewBox="0 0 24 24"><path d="M9 17H7a5 5 0 0 1 0-10h2"/><path d="M15 7h2a5 5 0 0 1 0 10h-2"/><path d="M12 3.5v2.5M12 18v2.5M8 12h1.5M14.5 12H16"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H9a3 3 0 0 1 3 3v13a2.5 2.5 0 0 0-2.5-2.5H3z"/><path d="M21 5.5A1.5 1.5 0 0 0 19.5 4H15a3 3 0 0 0-3 3v13a2.5 2.5 0 0 1 2.5-2.5H21z"/></symbol>
+    <symbol id="i-coins" viewBox="0 0 24 24"><ellipse cx="9" cy="7" rx="6" ry="2.5"/><path d="M3 7v4c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5V7"/><path d="M3 11v4c0 1.4 2.7 2.5 6 2.5.9 0 1.8-.1 2.6-.2"/><circle cx="17" cy="16" r="4.5"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="1.5"/><rect x="3" y="13" width="18" height="7" rx="1.5"/><path d="M7 7.5h.01M7 16.5h.01M11 7.5h6M11 16.5h6"/></symbol>
+    <symbol id="i-arrows" viewBox="0 0 24 24"><path d="M4 8h15M15.5 4.5 19 8l-3.5 3.5"/><path d="M20 16H5M8.5 12.5 5 16l3.5 3.5"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 17v-4M11 17V8M15 17v-6M19 17V5"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14"/><path d="M5 7l-3 7a3 3 0 0 0 6 0z"/><path d="M19 7l-3 7a3 3 0 0 0 6 0z"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5z"/><path d="M2 12.5l10 5 10-5"/><path d="M2 17l10 5 10-5"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+    <symbol id="i-message" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.8 7L4 20l1.1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01"/></symbol>
   </svg>
 
   <!-- ============ Header ============ -->
@@ -36,11 +56,11 @@
         <img src="assets/branco_logo_coalizao-ia-para-impacto.png" alt="Coalizão IA para Impacto">
       </a>
       <ul class="nav-links">
-        <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#como-atuamos">Como Atuamos</a></li>
         <li><a href="#organizacoes">Para Organizações</a></li>
+        <li><a href="#como-atuamos">Como Atuamos</a></li>
         <li><a href="#financiadores">Para Financiadores</a></li>
+        <li><a href="#quem-faz-parte">Quem Faz Parte</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
       <a class="btn btn-primary" href="#participar">Participar</a>
@@ -64,7 +84,7 @@
       </p>
       <div class="actions">
         <a class="btn btn-primary" href="#participar">Quero participar</a>
-        <a class="btn btn-ghost" href="#financiadores">Sou financiador(a)</a>
+        <a class="btn btn-ghost" href="#financiadores">Quero apoiar</a>
       </div>
     </div>
     <div class="wave-divider" aria-hidden="true">
@@ -89,32 +109,29 @@
     <div class="container">
       <div class="split">
         <div class="prose">
-          <span class="kicker"><svg class="insignia" aria-hidden="true"><use href="#insignia"/></svg>De onde viemos</span>
+          <span class="kicker">De onde viemos</span>
           <h2>Da Jornada à Coalizão</h2>
           <p>
-            Entre outubro de 2025 e junho de 2026, a <strong>Jornada IA para Impacto</strong>
-            reuniu mais de 70 lideranças do terceiro setor, do governo, da academia e da
-            tecnologia num processo colaborativo de nove meses. Juntas, elas diagnosticaram
-            as barreiras que impedem o setor de impacto brasileiro de usar a inteligência
-            artificial de forma estratégica — e co-criaram recomendações e protótipos
-            para superá-las.
+            O setor de impacto brasileiro quer usar inteligência artificial — mas enfrenta
+            barreiras reais: falta de formação, financiamento escasso, incerteza sobre a
+            regulação e uma infraestrutura cara e pouco soberana. Nenhuma organização
+            resolveria isso sozinha. Por isso a resposta é coletiva.
           </p>
           <p>
-            A Jornada se encerrou em junho de 2026 com uma decisão coletiva: dar
-            continuidade ao trabalho por meio de uma coalizão. A
-            <strong>Coalizão IA para Impacto</strong> é esse veículo — uma articulação
-            de várias organizações e redes, nenhuma delas proprietária do processo,
-            que transforma as recomendações da Jornada em ação.
+            Essa resposta nasceu da <strong>Jornada IA para Impacto</strong>, um processo
+            colaborativo de nove meses, entre outubro de 2025 e junho de 2026, que reuniu
+            lideranças do terceiro setor, do governo, da academia e da tecnologia para
+            mapear essas barreiras e criar recomendações e protótipos para superá-las.
           </p>
           <p>
-            A Coalizão está em fase de estruturação: definindo sua governança de forma
-            participativa, mobilizando recursos e preparando a fase de protótipos,
-            prevista para começar em 2027.
+            A Jornada se encerrou em junho de 2026 com essa decisão: continuar o trabalho
+            por meio de uma coalizão — uma articulação de várias organizações e redes, sem
+            um dono único, que transforma as recomendações da Jornada em ação.
           </p>
         </div>
         <div class="card-grid" style="grid-template-columns:1fr;">
           <article class="card">
-            <div class="card-icon lavanda"><svg class="insignia" aria-hidden="true"><use href="#insignia"/></svg></div>
+            <div class="card-icon lavanda"><svg class="ico" aria-hidden="true"><use href="#i-database"/></svg></div>
             <h3>O Cérebro da Jornada</h3>
             <p>
               Base de conhecimento co-construída pelas lideranças da Jornada, com 222
@@ -126,61 +143,17 @@
             </p>
           </article>
           <article class="card">
-            <div class="card-icon coral"><svg class="insignia rot-60" aria-hidden="true"><use href="#insignia"/></svg></div>
+            <div class="card-icon coral"><svg class="ico" aria-hidden="true"><use href="#i-map"/></svg></div>
             <h3>O diagnóstico completo</h3>
             <p>
               O percurso da Jornada — barreiras, alavancas, recomendações e protótipos —
               está documentado no site da Jornada IA para Impacto.
             </p>
+            <p style="margin-top:1rem;">
+              <a class="btn btn-navy" href="https://jornadadeimpacto.ia.br/" target="_blank" rel="noopener">Ver o diagnóstico</a>
+            </p>
           </article>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ O desafio ============ -->
-  <section class="section alt" id="desafio">
-    <div class="container">
-      <div class="section-head">
-        <span class="kicker"><svg class="insignia" aria-hidden="true"><use href="#insignia"/></svg>O desafio</span>
-        <h2>Seis barreiras seguram o setor de impacto</h2>
-        <p>
-          O diagnóstico da Jornada identificou barreiras interdependentes que limitam
-          o uso estratégico da IA pelas organizações da sociedade civil e pelos
-          negócios de impacto no Brasil.
-        </p>
-      </div>
-      <div class="card-grid">
-        <article class="card">
-          <div class="card-icon lavanda"><svg class="insignia" aria-hidden="true"><use href="#insignia"/></svg></div>
-          <h3>Conexões frágeis</h3>
-          <p>Organizações atuam em silos, sem coordenação contínua nem agenda comum.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon coral"><svg class="insignia rot-60" aria-hidden="true"><use href="#insignia"/></svg></div>
-          <h3>Letramento desigual</h3>
-          <p>A maturidade digital varia muito e falta um percurso formativo adaptado a cada realidade.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon verde"><svg class="insignia rot-120" aria-hidden="true"><use href="#insignia"/></svg></div>
-          <h3>Financiamento insuficiente</h3>
-          <p>Recursos escassos para tecnologia, com custos operacionais raramente cobertos.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon navy"><svg class="insignia rot-180" aria-hidden="true"><use href="#insignia"/></svg></div>
-          <h3>Infraestrutura inadequada</h3>
-          <p>Dependência de provedores estrangeiros e pouca soberania sobre dados.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon amarelo"><svg class="insignia rot-240" aria-hidden="true"><use href="#insignia"/></svg></div>
-          <h3>Voz política limitada</h3>
-          <p>O setor está ausente das mesas onde a regulação da IA no Brasil é decidida.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon coral"><svg class="insignia rot-300" aria-hidden="true"><use href="#insignia"/></svg></div>
-          <h3>Narrativas binárias</h3>
-          <p>O debate oscila entre solução mágica e ameaça — falta visão crítica e propositiva.</p>
-        </article>
       </div>
     </div>
   </section>
@@ -190,7 +163,7 @@
     <div class="container">
       <div class="quote-block">
         <svg class="quote-deco insignia" aria-hidden="true"><use href="#insignia"/></svg>
-        <span class="kicker"><svg class="insignia" aria-hidden="true"><use href="#insignia"/></svg>Nosso horizonte</span>
+        <span class="kicker">Nosso horizonte</span>
         <blockquote>
           Que a IA seja <span class="highlight">alavanca central</span> para decisões e
           soluções socioambientais escaláveis — com uso estratégico, atuação sistêmica
@@ -200,98 +173,29 @@
     </div>
   </section>
 
-  <!-- ============ Como atuamos ============ -->
-  <section class="section" id="como-atuamos">
-    <div class="container">
-      <div class="section-head">
-        <span class="kicker"><svg class="insignia" aria-hidden="true"><use href="#insignia"/></svg>Como atuamos</span>
-        <h2>Raiz, tronco e copa</h2>
-        <p>
-          A Coalizão se organiza como uma árvore: uma raiz que sustenta, o tronco
-          dos três pilares verticais e a copa — narrativas e conexão — que
-          atravessa todos.
-        </p>
-      </div>
-      <div class="card-grid" style="margin-bottom:1.5rem;">
-        <article class="card" style="grid-column:1/-1;border-left:5px solid #E0B000;">
-          <span class="tag" style="background:rgba(247,208,70,0.25);color:#A07E00;">A Copa · Pilar 3 · transversal</span>
-          <h3>Narrativas e Conexão</h3>
-          <p>
-            A copa atravessa e amplifica todos os pilares: constrói uma narrativa
-            crítica sobre IA e impacto, mantém viva a comunidade de prática e produz
-            o mapa do ecossistema e as pesquisas que alimentam o campo inteiro.
-          </p>
-        </article>
-      </div>
-      <div class="card-grid" style="margin-bottom:1.5rem;">
-        <article class="card">
-          <span class="tag">O Tronco · Pilar 1</span>
-          <div class="card-icon coral"><svg class="insignia" aria-hidden="true"><use href="#insignia"/></svg></div>
-          <h3>Letramento e Formação</h3>
-          <p>
-            Construir capacidade humana: trilhas e ofertas colaborativas de formação em IA,
-            adaptadas ao perfil e à maturidade de cada organização — aprendendo em
-            comunidade, não sozinho.
-          </p>
-        </article>
-        <article class="card">
-          <span class="tag">O Tronco · Pilar 2</span>
-          <div class="card-icon lavanda"><svg class="insignia rot-60" aria-hidden="true"><use href="#insignia"/></svg></div>
-          <h3>Governança e Regulação</h3>
-          <p>
-            Dar voz qualificada ao setor de impacto na agenda de regulação da IA no
-            Brasil, com guias práticos, capacitação para incidência política e
-            articulação com o governo.
-          </p>
-        </article>
-        <article class="card">
-          <span class="tag">O Tronco · Pilar 4</span>
-          <div class="card-icon navy"><svg class="insignia rot-180" aria-hidden="true"><use href="#insignia"/></svg></div>
-          <h3>Infraestrutura e Soberania</h3>
-          <p>
-            O músculo técnico: infraestrutura coletiva, diretrizes sustentáveis e
-            conhecimento crítico sobre os impactos socioambientais da infraestrutura
-            de IA.
-          </p>
-        </article>
-      </div>
-      <div class="card-grid">
-        <article class="card" style="grid-column:1/-1;border-left:5px solid var(--coral);">
-          <span class="tag">A Raiz · Estruturante</span>
-          <h3>Governança, financiamento e inteligência contínua</h3>
-          <p>
-            O que sustenta a Coalizão: uma governança colaborativa em construção, uma
-            secretaria executiva, mecanismos de financiamento coletivo e o Cérebro —
-            a base viva de conhecimento que alimenta todo o trabalho.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ Para organizações ============ -->
   <section class="section alt" id="organizacoes">
     <div class="container">
       <div class="section-head">
-        <span class="kicker"><svg class="insignia" aria-hidden="true"><use href="#insignia"/></svg>Para organizações de impacto</span>
+        <span class="kicker">Para organizações de impacto</span>
         <h2>O que a Coalizão oferece</h2>
         <p>
           Se a sua organização quer usar IA com mais estratégia, segurança e propósito,
           este é o lugar de aprender junto — e de influenciar o rumo do campo.
+          <strong>A participação é gratuita.</strong>
         </p>
       </div>
-      <div class="card-grid">
+      <div class="card-grid cols-3">
         <article class="card">
-          <div class="card-icon coral"><svg class="insignia" aria-hidden="true"><use href="#insignia"/></svg></div>
+          <div class="card-icon coral"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></div>
           <h3>Comunidade de prática</h3>
           <p>
             Encontros regulares em que a própria rede ensina a rede: casos reais de IA
-            aplicada ao impacto, gravados e transformados em conteúdo acessível para
-            quem não pôde estar ao vivo.
+            aplicada ao impacto.
           </p>
         </article>
         <article class="card">
-          <div class="card-icon lavanda"><svg class="insignia rot-60" aria-hidden="true"><use href="#insignia"/></svg></div>
+          <div class="card-icon lavanda"><svg class="ico" aria-hidden="true"><use href="#i-file"/></svg></div>
           <h3>Guias práticos</h3>
           <p>
             Materiais didáticos sobre governança de IA, proteção de dados e regulação,
@@ -299,7 +203,7 @@
           </p>
         </article>
         <article class="card">
-          <div class="card-icon verde"><svg class="insignia rot-120" aria-hidden="true"><use href="#insignia"/></svg></div>
+          <div class="card-icon verde"><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg></div>
           <h3>Formação</h3>
           <p>
             Ofertas colaborativas de formação em IA, construídas em consórcio com
@@ -307,7 +211,7 @@
           </p>
         </article>
         <article class="card">
-          <div class="card-icon amarelo"><svg class="insignia rot-180" aria-hidden="true"><use href="#insignia"/></svg></div>
+          <div class="card-icon amarelo"><svg class="ico" aria-hidden="true"><use href="#i-bulb"/></svg></div>
           <h3>Conhecimento aberto</h3>
           <p>
             Acesso ao Cérebro da Jornada — centenas de documentos, casos e ferramentas
@@ -315,7 +219,7 @@
           </p>
         </article>
         <article class="card">
-          <div class="card-icon navy"><svg class="insignia rot-240" aria-hidden="true"><use href="#insignia"/></svg></div>
+          <div class="card-icon navy"><svg class="ico" aria-hidden="true"><use href="#i-megaphone"/></svg></div>
           <h3>Voz coletiva</h3>
           <p>
             Um espaço permanente de agenda comum: juntas, as organizações ganham voz
@@ -323,7 +227,7 @@
           </p>
         </article>
         <article class="card">
-          <div class="card-icon coral"><svg class="insignia rot-300" aria-hidden="true"><use href="#insignia"/></svg></div>
+          <div class="card-icon coral"><svg class="ico" aria-hidden="true"><use href="#i-share"/></svg></div>
           <h3>Conexões</h3>
           <p>
             Pontes com financiadores, especialistas, universidades e outras organizações
@@ -334,88 +238,180 @@
     </div>
   </section>
 
-  <!-- ============ Linha do tempo ============ -->
-  <section class="section" id="linha-do-tempo">
+  <!-- ============ O desafio ============ -->
+  <section class="section" id="desafio">
     <div class="container">
       <div class="section-head">
-        <span class="kicker"><svg class="insignia" aria-hidden="true"><use href="#insignia"/></svg>Onde estamos</span>
-        <h2>O caminho da Coalizão</h2>
+        <span class="kicker">O desafio</span>
+        <h2>Seis barreiras seguram o setor de impacto</h2>
+        <p>
+          O diagnóstico da Jornada identificou barreiras interdependentes que limitam
+          o uso estratégico da IA pelas organizações da sociedade civil e pelos
+          negócios de impacto no Brasil.
+        </p>
       </div>
-      <ol class="timeline">
-        <li>
-          <span class="when">2025 – 2026</span>
-          <h3>Jornada IA para Impacto</h3>
-          <p>Nove meses de diagnóstico colaborativo: barreiras, alavancas, recomendações e 18 protótipos co-criados por 70+ lideranças.</p>
-        </li>
-        <li class="now">
-          <span class="when">2026 · agora</span>
-          <h3>Estruturação da Coalizão</h3>
-          <p>Construção participativa da governança, mobilização de recursos e ativação da comunidade de prática.</p>
-        </li>
-        <li>
-          <span class="when">2027</span>
-          <h3>Fase de protótipos</h3>
-          <p>Implementação das primeiras iniciativas: formação, guias, mapa do ecossistema e financiamento colaborativo.</p>
-        </li>
-        <li>
-          <span class="when">Horizonte</span>
-          <h3>Escala</h3>
-          <p>Um campo de impacto em que a IA é integrada, acessível e eticamente utilizada — em escala nacional.</p>
-        </li>
-      </ol>
+      <div class="barrier-grid">
+        <article class="barrier">
+          <div class="card-icon lavanda"><svg class="ico" aria-hidden="true"><use href="#i-unlink"/></svg></div>
+          <div>
+            <h3>Conexões frágeis</h3>
+            <p>Organizações atuam em silos, sem coordenação contínua nem agenda comum.</p>
+          </div>
+        </article>
+        <article class="barrier">
+          <div class="card-icon coral"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></div>
+          <div>
+            <h3>Letramento desigual</h3>
+            <p>A maturidade digital varia muito e falta um percurso formativo adaptado a cada realidade.</p>
+          </div>
+        </article>
+        <article class="barrier">
+          <div class="card-icon verde"><svg class="ico" aria-hidden="true"><use href="#i-coins"/></svg></div>
+          <div>
+            <h3>Financiamento insuficiente</h3>
+            <p>Recursos escassos para tecnologia, com custos operacionais raramente cobertos.</p>
+          </div>
+        </article>
+        <article class="barrier">
+          <div class="card-icon navy"><svg class="ico" aria-hidden="true"><use href="#i-server"/></svg></div>
+          <div>
+            <h3>Infraestrutura inadequada</h3>
+            <p>Dependência de provedores estrangeiros e pouca soberania sobre dados.</p>
+          </div>
+        </article>
+        <article class="barrier">
+          <div class="card-icon amarelo"><svg class="ico" aria-hidden="true"><use href="#i-voice-off"/></svg></div>
+          <div>
+            <h3>Voz política limitada</h3>
+            <p>O setor está ausente das mesas onde a regulação da IA no Brasil é decidida.</p>
+          </div>
+        </article>
+        <article class="barrier">
+          <div class="card-icon coral"><svg class="ico" aria-hidden="true"><use href="#i-arrows"/></svg></div>
+          <div>
+            <h3>Narrativas binárias</h3>
+            <p>O debate oscila entre solução mágica e ameaça — falta visão crítica e propositiva.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Como atuamos ============ -->
+  <section class="section alt" id="como-atuamos">
+    <div class="container">
+      <div class="section-head">
+        <span class="kicker">Como atuamos</span>
+        <h2>Como organizamos o trabalho</h2>
+        <p>
+          A Coalizão IA para Impacto reúne organizações do terceiro setor, academia,
+          governo e tecnologia para que a inteligência artificial seja usada a favor do
+          impacto social no Brasil. Organizamos o trabalho em frentes complementares,
+          sustentadas por uma base comum.
+        </p>
+      </div>
+      <div class="tree">
+        <div class="tree-band tree-top">
+          <div class="card-icon amarelo"><svg class="ico" aria-hidden="true"><use href="#i-message"/></svg></div>
+          <div>
+            <span class="band-label">Atravessa todas as frentes</span>
+            <h3>Narrativas e Conexão</h3>
+            <p>
+              Construímos uma visão crítica sobre IA e impacto social, mantemos viva uma
+              comunidade de prática entre as organizações participantes, e produzimos
+              pesquisas e mapeamentos que todo o campo pode usar.
+            </p>
+          </div>
+        </div>
+        <div class="tree-cols">
+          <div class="tree-col">
+            <div class="card-icon coral"><svg class="ico" aria-hidden="true"><use href="#i-cap"/></svg></div>
+            <h3>Letramento e Formação</h3>
+            <p>
+              Ajudamos organizações sociais a aprender a usar IA na prática, com trilhas
+              adaptadas ao estágio de cada uma e aprendizado em grupo, não sozinho.
+            </p>
+          </div>
+          <div class="tree-col">
+            <div class="card-icon lavanda"><svg class="ico" aria-hidden="true"><use href="#i-scale"/></svg></div>
+            <h3>Governança e Regulação</h3>
+            <p>
+              Levamos a voz do terceiro setor para as discussões que definem como a IA
+              será regulada no Brasil, com guias práticos e apoio para quem quer
+              participar desse debate.
+            </p>
+          </div>
+          <div class="tree-col">
+            <div class="card-icon verde"><svg class="ico" aria-hidden="true"><use href="#i-server"/></svg></div>
+            <h3>Infraestrutura e Soberania</h3>
+            <p>
+              Olhamos de perto os custos sociais e ambientais da infraestrutura por trás
+              da IA (como os data centers) e buscamos caminhos mais sustentáveis e
+              coletivos para o setor de impacto.
+            </p>
+          </div>
+        </div>
+        <div class="tree-band tree-base">
+          <div class="card-icon"><svg class="ico" aria-hidden="true"><use href="#i-layers"/></svg></div>
+          <div>
+            <span class="band-label">A base comum</span>
+            <h3>Raiz Estruturante</h3>
+            <p>
+              O que sustenta tudo isso: uma governança colaborativa, um time que cuida da
+              operação do dia a dia, formas conjuntas de captar recursos, e uma base de
+              conhecimento compartilhada.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ============ Para financiadores ============ -->
   <section class="section dark" id="financiadores">
     <div class="container">
-      <div class="section-head">
-        <span class="kicker"><svg class="insignia" aria-hidden="true"><use href="#insignia"/></svg>Para financiadores</span>
-        <h2>Um investimento no campo, não em um projeto</h2>
-        <p>
-          Apoiar a Coalizão é investir na infraestrutura coletiva que permite a todo o
-          setor de impacto brasileiro usar IA com qualidade — com governança
-          compartilhada e aprendizado entre pares.
-        </p>
+      <div class="funders">
+        <div>
+          <span class="kicker">Para financiadores</span>
+          <h2>Um investimento no campo, não em um projeto</h2>
+          <p class="lead">
+            Apoiar a Coalizão é investir na infraestrutura coletiva que permite a todo o
+            setor de impacto brasileiro usar IA com qualidade — com governança
+            compartilhada e aprendizado entre pares.
+          </p>
+          <a class="btn btn-primary" href="contato.html">Conversar sobre apoio à Coalizão</a>
+        </div>
+        <ul class="funders-list">
+          <li>
+            <div class="card-icon"><svg class="ico" aria-hidden="true"><use href="#i-globe"/></svg></div>
+            <div>
+              <h3>Efeito sistêmico</h3>
+              <p>Em vez de financiar soluções isoladas, o recurso destrava barreiras que afetam o campo inteiro.</p>
+            </div>
+          </li>
+          <li>
+            <div class="card-icon"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></div>
+            <div>
+              <h3>Governança compartilhada</h3>
+              <p>Financiadores participam da construção da Coalizão desde o início, com assento na governança.</p>
+            </div>
+          </li>
+          <li>
+            <div class="card-icon"><svg class="ico" aria-hidden="true"><use href="#i-chart"/></svg></div>
+            <div>
+              <h3>Diagnóstico sólido</h3>
+              <p>A estratégia nasce de nove meses de trabalho com 70+ lideranças do campo.</p>
+            </div>
+          </li>
+          <li>
+            <div class="card-icon"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg></div>
+            <div>
+              <h3>Recortes temáticos</h3>
+              <p>O trabalho pode ser aprofundado por temas — como saúde ou educação — em diálogo com cada financiador.</p>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="card-grid">
-        <article class="card">
-          <div class="card-icon coral"><svg class="insignia" aria-hidden="true"><use href="#insignia"/></svg></div>
-          <h3>Efeito sistêmico</h3>
-          <p>
-            Em vez de financiar soluções isoladas, o recurso destrava barreiras que
-            afetam o campo inteiro: letramento, financiamento, narrativa, regulação
-            e infraestrutura.
-          </p>
-        </article>
-        <article class="card">
-          <div class="card-icon lavanda"><svg class="insignia rot-60" aria-hidden="true"><use href="#insignia"/></svg></div>
-          <h3>Governança compartilhada</h3>
-          <p>
-            Financiadores participam da construção da Coalizão desde o início, com
-            assento na governança e aprendizado conjunto sobre IA e filantropia.
-          </p>
-        </article>
-        <article class="card">
-          <div class="card-icon amarelo"><svg class="insignia rot-120" aria-hidden="true"><use href="#insignia"/></svg></div>
-          <h3>Diagnóstico sólido</h3>
-          <p>
-            A estratégia nasce de nove meses de trabalho com 70+ lideranças do campo —
-            não de uma hipótese de gabinete.
-          </p>
-        </article>
-        <article class="card">
-          <div class="card-icon coral"><svg class="insignia rot-180" aria-hidden="true"><use href="#insignia"/></svg></div>
-          <h3>Recortes temáticos</h3>
-          <p>
-            O trabalho da Coalizão pode ser aprofundado por temas — como saúde ou
-            educação — em diálogo com as prioridades de cada financiador.
-          </p>
-        </article>
-      </div>
-      <p style="text-align:center;margin-top:2.5rem;">
-        <a class="btn btn-primary" href="contato.html">Conversar sobre apoio à Coalizão</a>
-      </p>
     </div>
   </section>
 
@@ -423,7 +419,7 @@
   <section class="section" id="quem-faz-parte">
     <div class="container">
       <div class="section-head">
-        <span class="kicker"><svg class="insignia" aria-hidden="true"><use href="#insignia"/></svg>Quem faz parte</span>
+        <span class="kicker">Quem faz parte</span>
         <h2>Uma coalizão é feita de seus membros</h2>
         <p>
           Organizações que já estão à mesa — como financiadoras, parceiras técnicas
@@ -465,7 +461,7 @@
   <section class="section alt" id="time">
     <div class="container">
       <div class="section-head">
-        <span class="kicker"><svg class="insignia" aria-hidden="true"><use href="#insignia"/></svg>Time</span>
+        <span class="kicker">Time</span>
         <h2>Quem toca o dia a dia</h2>
         <p>
           Um núcleo enxuto conduz a estruturação da Coalizão, com o apoio de uma rede
@@ -519,13 +515,12 @@
       <div class="cta-banner">
         <h2>Faça parte da Coalizão IA para Impacto</h2>
         <p>
-          Organizações interessadas participam de um encontro coletivo de boas-vindas
-          para conhecer as frentes de trabalho e escolher como se envolver.
+          Organizações interessadas participam, gratuitamente, de um encontro coletivo de
+          boas-vindas para conhecer as frentes de trabalho e escolher como se envolver.
           Financiadores são bem-vindos para uma conversa sobre as formas de apoio.
         </p>
         <div class="actions">
-          <a class="btn btn-primary" href="contato.html">Manifestar interesse</a>
-          <a class="btn btn-ghost" href="contato.html">Falar com a equipe</a>
+          <a class="btn btn-primary" href="contato.html">Fale com a gente</a>
         </div>
       </div>
     </div>
@@ -546,8 +541,8 @@
           <h4>Navegação</h4>
           <ul>
             <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#como-atuamos">Como Atuamos</a></li>
             <li><a href="#organizacoes">Para Organizações</a></li>
+            <li><a href="#como-atuamos">Como Atuamos</a></li>
             <li><a href="#financiadores">Para Financiadores</a></li>
             <li><a href="#quem-faz-parte">Quem Faz Parte</a></li>
             <li><a href="#time">Time</a></li>

@@ -107,6 +107,7 @@ a { color: inherit; }
 }
 
 .nav-links a {
+  white-space: nowrap;
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 600;
@@ -353,7 +354,7 @@ a { color: inherit; }
   border-color: var(--lavanda-border);
 }
 
-.card .card-icon {
+.card-icon {
   width: 54px;
   height: 54px;
   border-radius: var(--radius-md);
@@ -465,6 +466,131 @@ a { color: inherit; }
   font-size: 0.95rem;
   box-shadow: var(--shadow-card);
 }
+
+/* ---------- Ícones temáticos (traço, herdam a cor) ---------- */
+.ico {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Grade fixa 3 + 3 */
+.card-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 900px) { .card-grid.cols-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .card-grid.cols-3 { grid-template-columns: 1fr; } }
+
+/* ---------- Barreiras: blocos horizontais compactos ---------- */
+.barrier-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem 1.25rem;
+}
+@media (max-width: 900px) { .barrier-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .barrier-grid { grid-template-columns: 1fr; } }
+
+.barrier {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.1rem 1.25rem;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--coral);
+  box-shadow: var(--shadow-card);
+}
+.barrier .card-icon { flex: 0 0 auto; width: 44px; height: 44px; margin: 0; }
+.barrier .card-icon .ico { width: 22px; height: 22px; }
+.barrier h3 { margin: 0 0 0.2rem; font-size: 1.05rem; }
+.barrier p { margin: 0; color: var(--ink-soft); font-size: 0.93rem; line-height: 1.45; }
+
+/* ---------- Como atuamos: diagrama em camadas ---------- */
+.tree {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.9rem;
+}
+.tree-band {
+  display: flex;
+  gap: 1.1rem;
+  align-items: center;
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.75rem;
+}
+.tree-band h3 { margin: 0 0 0.25rem; font-size: 1.2rem; }
+.tree-band p { margin: 0; font-size: 0.98rem; }
+.tree-band .card-icon { flex: 0 0 auto; margin: 0; }
+.tree-band .band-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+.tree-top {
+  background: rgba(247, 208, 70, 0.16);
+  border: 1px solid rgba(224, 176, 0, 0.35);
+}
+.tree-top p { color: var(--ink-soft); }
+.tree-top .band-label { color: #A07E00; }
+.tree-base {
+  background: linear-gradient(150deg, var(--navy), var(--navy-deep));
+  color: var(--white);
+}
+.tree-base p { color: var(--white-70); }
+.tree-base .band-label { color: var(--lavanda); }
+.tree-base .card-icon { background: var(--white-tint); color: var(--lavanda); }
+.tree-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.9rem;
+}
+@media (max-width: 800px) {
+  .tree-cols { grid-template-columns: 1fr; }
+  .tree-band { flex-direction: column; align-items: flex-start; }
+}
+.tree-col {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border-top: 4px solid var(--coral);
+  box-shadow: var(--shadow-card);
+  padding: 1.5rem;
+}
+.tree-col:nth-child(2) { border-top-color: var(--lavanda); }
+.tree-col:nth-child(3) { border-top-color: #1B7E5A; }
+.tree-col h3 { margin: 0.9rem 0 0.4rem; font-size: 1.1rem; }
+.tree-col p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
+.tree-col .card-icon { margin: 0; }
+
+/* ---------- Financiadores: texto + lista ---------- */
+.funders {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3rem;
+  align-items: center;
+}
+@media (max-width: 860px) { .funders { grid-template-columns: 1fr; gap: 2rem; } }
+.funders .kicker { color: var(--lavanda); background: var(--white-tint); }
+.funders h2 {
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+.funders .lead { color: var(--white-70); font-size: 1.1rem; margin: 0 0 1.75rem; }
+.funders-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.25rem; }
+.funders-list li { display: flex; gap: 1rem; align-items: flex-start; }
+.funders-list .card-icon {
+  flex: 0 0 auto; width: 44px; height: 44px; margin: 0;
+  background: var(--white-tint); color: var(--coral);
+}
+.funders-list .card-icon .ico { width: 22px; height: 22px; }
+.funders-list h3 { margin: 0 0 0.15rem; font-size: 1.08rem; color: var(--white); }
+.funders-list p { margin: 0; color: var(--white-70); font-size: 0.95rem; }
 
 /* ---------- Mural de logos (quem faz parte) ---------- */
 .logo-wall {
@@ -658,5 +784,7 @@ a { color: inherit; }
 
 @media (max-width: 700px) {
   .site-footer .footer-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 1020px) {
   .nav-links { display: none; }
 }
