@@ -2,6 +2,20 @@ services:
   - type: web
     runtime: static
     name: coalizao-ia-para-impacto
+    branch: main
     buildCommand: ""
     staticPublishPath: .
     autoDeploy: true
+
+  # Versão alternativa para revisão do grupo. Sem domínio próprio: só o endereço onrender.com.
+  - type: web
+    runtime: static
+    name: coalizao-ia-para-impacto-stage
+    branch: stage
+    buildCommand: ""
+    staticPublishPath: .
+    autoDeploy: true
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex, nofollow

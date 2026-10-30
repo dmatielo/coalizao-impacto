@@ -66,6 +66,17 @@ a { color: inherit; }
   padding: 0 1.5rem;
 }
 
+/* ---------- Faixa da versão de teste (js/stage.js) ---------- */
+.stage-banner {
+  background: #F7D046;
+  color: var(--navy-deep);
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.45rem 1rem;
+}
+.stage-banner a { color: inherit; }
+
 /* ---------- Header / Nav ---------- */
 .site-header {
   position: sticky;
