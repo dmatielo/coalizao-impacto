@@ -53,6 +53,15 @@ Insígnia (hexágono-nó): embutida como `<symbol id="insignia">` no topo de cad
 2. Componentes prontos: `.hero`, `.stats-band`, `.section` (variações `.alt` e `.dark`), `.section-head`, `.card-grid`/`.card` (com `.tag`), `.chip-grid`/`.chip`, `.timeline`, `.quote-block`, `.cta-banner`, `.btn` (`-primary`, `-ghost`, `-navy`).
 3. Atualize o `aria-current="page"` no menu.
 
+## Ambientes
+
+| Branch | Site | Para quê |
+|---|---|---|
+| `main` | https://iaparaimpacto.org.br | Site oficial |
+| `stage` | https://coalizao-ia-para-impacto-stage.onrender.com | Versão alternativa para revisão (noindex, faixa de teste) |
+
+Os dois serviços estão declarados no `render.yaml` e publicam a cada push no próprio branch. O `js/stage.js` mostra a faixa de teste e marca o formulário com `[STAGE]` só fora do domínio oficial, então para promover a versão alternativa basta mesclar `stage` em `main`.
+
 ## Visualizar localmente
 
 ```bash
