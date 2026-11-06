@@ -30,8 +30,9 @@
   --white-70: rgba(255, 255, 255, 0.75);
   --white: #FFFFFF;
 
-  /* Tipografia — Calibri (Carlito na web) */
-  --font-sans: 'Carlito', Calibri, 'Segoe UI', system-ui, sans-serif;
+  /* Tipografia — fontes abertas do brandbook: Atkinson Hyperlegible (texto), Inter (títulos) */
+  --font-sans: 'Atkinson Hyperlegible', 'Segoe UI', system-ui, sans-serif;
+  --font-head: 'Inter', 'Segoe UI', system-ui, sans-serif;
 
   /* Layout */
   --container: 1120px;
@@ -55,6 +56,8 @@ body {
   font-size: 1.05rem;
   -webkit-font-smoothing: antialiased;
 }
+
+h1, h2, h3, h4 { font-family: var(--font-head); letter-spacing: -0.01em; }
 
 img { max-width: 100%; display: block; }
 
@@ -276,6 +279,7 @@ a { color: inherit; }
 
 .stat .num {
   display: block;
+  font-family: var(--font-head);
   font-size: 2.1rem;
   font-weight: 700;
   color: var(--coral);
@@ -825,45 +829,38 @@ a { color: inherit; }
 /* ---------- Time ---------- */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.5rem;
-  max-width: 980px;
-  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.25rem 2rem;
 }
+@media (max-width: 960px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .team-grid { grid-template-columns: 1fr; } }
 
 .team-card {
-  background: var(--white);
-  border: 1px solid rgba(158, 147, 199, 0.18);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
-  padding: 1.75rem 1.5rem;
-  text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 1.1rem;
+  align-items: start;
 }
-
-.team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card-hover); }
 
 .team-card img {
-  width: 120px;
-  height: 120px;
+  width: 104px;
+  height: 104px;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 auto 1rem;
-  border: 3px solid var(--lavanda-tint);
+  box-shadow: 0 0 0 4px var(--white), 0 6px 18px rgba(10, 49, 76, 0.15);
 }
 
-.team-card h3 { margin: 0 0 0.25rem; font-size: 1.1rem; }
+.team-card h3 { margin: 0.2rem 0 0.15rem; font-size: 1.08rem; }
 
 .team-card .team-role {
-  color: var(--coral);
+  color: var(--coral-dark);
   font-weight: 700;
   font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  line-height: 1.35;
+  margin-bottom: 0.4rem;
 }
 
-.team-card p { margin: 0; color: var(--ink-soft); font-size: 0.9rem; }
+.team-card p { margin: 0; color: var(--ink-soft); font-size: 0.9rem; line-height: 1.5; }
 
 /* ---------- Split (texto + coluna) ---------- */
 .split {
@@ -931,6 +928,158 @@ a { color: inherit; }
 .cta-banner h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 0 0 1rem; }
 .cta-banner p { color: var(--white-70); max-width: 40rem; margin: 0 auto 2rem; }
 .cta-banner .actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* ---------- Topo com foto (capa do deck) ---------- */
+.hero.hero-photo {
+  text-align: left;
+  padding: 7rem 0 9rem;
+  background:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.92) 0%, rgba(6, 31, 49, 0.72) 45%, rgba(6, 31, 49, 0.35) 100%),
+    url('../assets/fotos/terra-noite.jpg') center / cover no-repeat,
+    var(--navy-deep);
+}
+.hero-photo .hero-inner { max-width: 44rem; }
+.hero-photo h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.1; }
+.hero-photo .lead { margin: 0 0 1rem; }
+.hero-photo .actions { justify-content: flex-start; }
+.hero-photo .rule {
+  width: 56px;
+  height: 4px;
+  background: var(--coral);
+  border-radius: 2px;
+  margin: 0 0 1.5rem;
+}
+
+.news-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-pill);
+  padding: 0.35rem 0.9rem 0.35rem 0.4rem;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 1.75rem;
+}
+.news-pill .badge {
+  background: var(--coral);
+  border-radius: var(--radius-pill);
+  padding: 0.15rem 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.news-pill:hover { background: rgba(255, 255, 255, 0.18); }
+.news-pill[hidden] { display: none; }
+
+/* ---------- Novidades ---------- */
+.news-feature {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+@media (max-width: 800px) { .news-feature { grid-template-columns: 1fr; } }
+.news-feature .news-side {
+  background: linear-gradient(150deg, var(--coral), var(--coral-dark));
+  color: var(--white);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.news-side .news-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+.news-side .news-icon { width: 72px; height: 72px; stroke-width: 1.4; opacity: 0.9; }
+.news-side .news-deadline { font-family: var(--font-head); font-size: 1.6rem; font-weight: 800; line-height: 1.15; }
+.news-side .news-deadline small { display: block; font-size: 0.9rem; font-weight: 600; opacity: 0.9; }
+.news-feature .news-body { padding: 2.25rem 2.25rem 2rem; }
+.news-body h3 { font-size: 1.45rem; line-height: 1.25; margin: 0 0 0.75rem; }
+.news-body p { color: var(--ink-soft); margin: 0 0 1rem; }
+.news-body .news-credit { font-size: 0.88rem; margin-bottom: 1.5rem; }
+.news-feature.is-closed .news-side { background: linear-gradient(150deg, var(--slate, #4A6178), var(--navy)); }
+
+/* ---------- Da Jornada à Coalizão: texto + foto ---------- */
+.journey {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+@media (max-width: 860px) { .journey { grid-template-columns: 1fr; } }
+.journey h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); line-height: 1.2; margin: 0 0 1rem; }
+.journey p { color: var(--ink-soft); }
+.journey-photo { position: relative; margin: 0; }
+.journey-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card-hover);
+}
+.journey-photo figcaption { font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.6rem; }
+.journey-facts {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: start;
+  gap: 0.5rem 2rem;
+  margin: 1.75rem 0 0;
+}
+@media (max-width: 520px) { .journey-facts { grid-template-columns: repeat(2, auto); } }
+.journey-facts div { font-size: 0.85rem; color: var(--ink-soft); }
+.journey-facts strong {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 1.9rem;
+  line-height: 1.1;
+  color: var(--coral);
+}
+.resource-row { margin-top: 3rem; }
+
+/* ---------- Citação com foto ---------- */
+.quote-split {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  background: linear-gradient(150deg, var(--navy-deep), var(--navy));
+  color: var(--white);
+}
+@media (max-width: 800px) { .quote-split { grid-template-columns: 1fr; } .quote-split .quote-photo { min-height: 220px; } }
+.quote-split .quote-text {
+  padding: 5rem 3rem 5rem max(1.5rem, calc((100vw - var(--container)) / 2 + 1.5rem));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.quote-split .kicker { align-self: flex-start; color: var(--lavanda); background: var(--white-tint); }
+.quote-split blockquote {
+  margin: 0;
+  font-family: var(--font-head);
+  font-size: clamp(1.35rem, 2.6vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.35;
+}
+.quote-split blockquote .highlight { color: var(--coral); }
+.quote-split .quote-photo { background: url('../assets/fotos/floresta.jpg') center / cover no-repeat; }
+
+/* ---------- Convite final com foto ---------- */
+.cta-banner.cta-photo {
+  background:
+    linear-gradient(150deg, rgba(6, 31, 49, 0.88), rgba(10, 49, 76, 0.7)),
+    url('../assets/fotos/cidade-luzes.jpg') center / cover no-repeat,
+    var(--navy);
+  padding: 4.5rem 2.5rem;
+}
 
 /* ---------- Footer ---------- */
 .site-footer {

@@ -7,7 +7,7 @@
   <meta name="description" content="Uma articulação brasileira para destravar o uso estratégico, ético e inclusivo da inteligência artificial pelas organizações da sociedade civil e negócios de impacto.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/coalizao.css">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
@@ -42,23 +42,25 @@
   </header>
 
   <!-- ============ Hero ============ -->
-  <section class="hero">
-    <svg class="insignia hero-deco" style="width:200px;height:228px;top:6%;left:5%;color:var(--lavanda);transform:rotate(14deg)" aria-hidden="true"><use href="assets/icons.svg#insignia"/></svg>
-    <svg class="insignia hero-deco" style="width:110px;height:126px;top:58%;left:13%;color:var(--coral);transform:rotate(-18deg)" aria-hidden="true"><use href="assets/icons.svg#insignia"/></svg>
-    <svg class="insignia hero-deco" style="width:260px;height:297px;top:10%;right:4%;color:#FFFFFF;transform:rotate(26deg)" aria-hidden="true"><use href="assets/icons.svg#insignia"/></svg>
-    <svg class="insignia hero-deco" style="width:90px;height:103px;bottom:20%;right:15%;color:var(--lavanda);transform:rotate(-8deg)" aria-hidden="true"><use href="assets/icons.svg#insignia"/></svg>
+  <section class="hero hero-photo">
     <div class="container">
-      <img class="hero-logo" src="assets/branco_logo_coalizao-ia-para-impacto.png" alt="">
-      <h1>Um movimento para colocar a IA<br>a serviço do <span class="highlight">impacto</span></h1>
-      <p class="lead">
-        A Coalizão IA para Impacto é uma articulação brasileira que reúne organizações
-        da sociedade civil, negócios de impacto, financiadores, governo, academia e
-        especialistas para destravar o uso estratégico, ético e inclusivo da
-        inteligência artificial no setor de impacto.
-      </p>
-      <div class="actions">
-        <a class="btn btn-primary" href="#participar">Quero participar</a>
-        <a class="btn btn-ghost" href="#financiadores">Quero apoiar</a>
+      <div class="hero-inner">
+        <a class="news-pill js-news-pill" href="#novidades">
+          <span class="badge">Novo</span>
+          Pesquisa nacional sobre IA no campo social: responda até 5/12 →
+        </a>
+        <h1>Um movimento para colocar a IA a serviço do <span class="highlight">impacto</span></h1>
+        <div class="rule"></div>
+        <p class="lead">
+          A Coalizão IA para Impacto é uma articulação brasileira que reúne organizações
+          da sociedade civil, negócios de impacto, financiadores, governo, academia e
+          especialistas para destravar o uso estratégico, ético e inclusivo da
+          inteligência artificial no setor de impacto.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#participar">Quero participar</a>
+          <a class="btn btn-ghost" href="#financiadores">Quero apoiar</a>
+        </div>
       </div>
     </div>
     <div class="wave-divider" aria-hidden="true">
@@ -78,11 +80,46 @@
     </div>
   </div>
 
+  <!-- ============ Novidades ============ -->
+  <section class="section" id="novidades" style="padding-bottom:1rem;">
+    <div class="container">
+      <div class="section-head" style="margin-bottom:2rem;">
+        <span class="kicker">Novidades</span>
+        <h2>O que está acontecendo</h2>
+      </div>
+      <article class="news-feature js-news" data-ate="2026-12-05">
+        <div class="news-side">
+          <span class="news-tag js-news-tag">Pesquisa · Coleta aberta</span>
+          <svg class="ico news-icon" aria-hidden="true"><use href="assets/icons.svg#i-chart"/></svg>
+          <div class="news-deadline js-news-deadline">Até 5 de dezembro<small>de 2026</small></div>
+        </div>
+        <div class="news-body">
+          <h3>Pesquisa Nacional sobre IA no Campo Social Brasileiro — 2ª edição</h3>
+          <p>
+            Sua organização já usa inteligência artificial — ou ainda não? As duas respostas
+            importam. A pesquisa quer entender como as organizações do campo social brasileiro
+            se relacionam com a IA: usos, percepções, barreiras, riscos e oportunidades.
+          </p>
+          <p>
+            A 1ª edição, com dados de 2024, foi o primeiro panorama nacional do tema. Esta nova
+            rodada abre uma série histórica e vai permitir olhar os resultados por região e por
+            área temática.
+          </p>
+          <p class="news-credit">
+            Realizada pelo Canal SabIAr, com apoio técnico da FGV/CEAPG, em parceria com a
+            Coalizão IA para Impacto.
+          </p>
+          <a class="btn btn-primary js-news-cta" href="https://www.canalsabiar.com.br/iai/" target="_blank" rel="noopener">Responder à pesquisa</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
   <!-- ============ Sobre / origem ============ -->
   <section class="section" id="sobre">
     <div class="container">
-      <div class="split">
-        <div class="prose">
+      <div class="journey">
+        <div>
           <span class="kicker">De onde viemos</span>
           <h2>Da Jornada à Coalizão</h2>
           <p>
@@ -102,8 +139,19 @@
             por meio de uma coalizão — uma articulação de várias organizações e redes, sem
             um dono único, que transforma as recomendações da Jornada em ação.
           </p>
+          <div class="journey-facts">
+            <div><strong>70+</strong>lideranças</div>
+            <div><strong>5</strong>regiões</div>
+            <div><strong>4</strong>setores</div>
+            <div><strong>9</strong>meses</div>
+          </div>
         </div>
-        <div class="card-grid" style="grid-template-columns:1fr;">
+        <figure class="journey-photo">
+          <img src="assets/fotos/jornada-grupo.jpg" alt="Participantes da Jornada IA para Impacto reunidos em encontro presencial" loading="lazy">
+          <figcaption>Lideranças da Jornada IA para Impacto</figcaption>
+        </figure>
+      </div>
+      <div class="card-grid resource-row" style="grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));">
           <article class="card">
             <div class="card-icon lavanda"><svg class="ico" aria-hidden="true"><use href="assets/icons.svg#i-database"/></svg></div>
             <h3>O Cérebro da Jornada</h3>
@@ -130,24 +178,21 @@
               <li><a href="relatorio.html">Relatório final</a></li>
             </ul>
           </article>
-        </div>
       </div>
     </div>
   </section>
 
   <!-- ============ Objetivo ============ -->
-  <section class="section dark" id="objetivo">
-    <div class="container">
-      <div class="quote-block">
-        <svg class="quote-deco insignia" aria-hidden="true"><use href="assets/icons.svg#insignia"/></svg>
-        <span class="kicker">Nosso horizonte</span>
-        <blockquote>
-          Que a IA seja <span class="highlight">alavanca central</span> para decisões e
-          soluções socioambientais escaláveis — com uso estratégico, atuação sistêmica
-          e redução de desigualdades.
-        </blockquote>
-      </div>
+  <section class="quote-split" id="objetivo">
+    <div class="quote-text">
+      <span class="kicker">Nosso horizonte</span>
+      <blockquote>
+        Que a IA seja <span class="highlight">alavanca central</span> para decisões e
+        soluções socioambientais escaláveis — com uso estratégico, atuação sistêmica
+        e redução de desigualdades.
+      </blockquote>
     </div>
+    <div class="quote-photo" role="img" aria-label="Copa de árvores vista de baixo"></div>
   </section>
 
   <!-- ============ Para organizações ============ -->
@@ -451,46 +496,82 @@
         <span class="kicker">Time</span>
         <h2>Quem toca o dia a dia</h2>
         <p>
-          Um núcleo enxuto conduz a estruturação da Coalizão, com o apoio de uma rede
-          de voluntários e especialistas.
+          Um núcleo enxuto conduz a Coalizão, com o apoio de uma rede de voluntários
+          e especialistas.
         </p>
       </div>
       <div class="team-grid">
         <div class="team-card">
-          <img src="assets/equipe/celia-cruz.jpg" alt="Célia Cruz">
-          <h3>Célia Cruz</h3>
-          <div class="team-role">Mobilização e Governança</div>
-          <p>Mobilização de parceiros, ativação da governança e da rede e liderança do pilar de financiamento inovador.</p>
+          <img src="assets/equipe/celia-cruz.jpg" alt="Célia Cruz" loading="lazy">
+          <div>
+            <h3>Célia Cruz</h3>
+            <div class="team-role">Liderança estratégica · mobilização de recursos e governança</div>
+            <p>Estruturação de novos campos de impacto, como investimentos e negócios de impacto; liderou coalizões e jornadas multissetoriais.</p>
+          </div>
         </div>
         <div class="team-card">
-          <img src="assets/equipe/dani-matielo.jpg" alt="Dani Matielo">
-          <h3>Dani Matielo</h3>
-          <div class="team-role">Operações e Narrativas</div>
-          <p>Liderança de operações, coordenação das alavancas e protótipos e liderança da frente de narrativas.</p>
+          <img src="assets/equipe/dani-matielo.jpg" alt="Dani Matielo" loading="lazy">
+          <div>
+            <h3>Dani Matielo</h3>
+            <div class="team-role">Liderança estratégica · tecnologia e implementação dos projetos</div>
+            <p>Tecnologia para a transformação social: IA para impacto, redes globais de inovação social e políticas de inclusão digital.</p>
+          </div>
         </div>
         <div class="team-card">
-          <img src="assets/equipe/mariana-valle.jpg" alt="Mariana Valle">
-          <h3>Mariana Valle</h3>
-          <div class="team-role">Comunidade de Prática · Voluntária</div>
-          <p>Estrategista de comunicação e projetos, responsável pela comunidade de prática e pelo engajamento da rede.</p>
+          <img src="assets/equipe/flavia-ribeiro.jpg" alt="Flávia Ribeiro" loading="lazy">
+          <div>
+            <h3>Flávia Ribeiro</h3>
+            <div class="team-role">Time estratégico · voluntária</div>
+            <p>Consultora na Kearney em sustentabilidade, impacto social e transição energética; lidera o planejamento da Coalizão e a análise de capital catalítico.</p>
+          </div>
         </div>
         <div class="team-card">
-          <img src="assets/equipe/fabiana-sobral.jpg" alt="Fabiana Sobral">
-          <h3>Fabiana Sobral</h3>
-          <div class="team-role">Secretaria Executiva</div>
-          <p>Consultora em gestão administrativa e secretariado executivo, apoia a secretaria em todas as frentes.</p>
+          <img src="assets/equipe/ciro-fleury.jpg" alt="Ciro de Carvalho Fleury" loading="lazy">
+          <div>
+            <h3>Ciro de Carvalho Fleury</h3>
+            <div class="team-role">Time estratégico · voluntário</div>
+            <p>Executivo sênior com trajetória na Alcoa e no IDIS; coach de lideranças. Na Coalizão, acompanha agendas e protótipos.</p>
+          </div>
         </div>
         <div class="team-card">
-          <img src="assets/equipe/flavia-ribeiro.jpg" alt="Flávia Ribeiro">
-          <h3>Flávia Ribeiro</h3>
-          <div class="team-role">Estratégia · Voluntária</div>
-          <p>Consultora estratégica na Kearney, lidera a consultoria voluntária no planejamento da Coalizão.</p>
+          <img src="assets/equipe/lucas-abreu.jpg" alt="Lucas Abreu" loading="lazy">
+          <div>
+            <h3>Lucas Abreu</h3>
+            <div class="team-role">Time estratégico · voluntário</div>
+            <p>Especialista em transformação organizacional e desenvolvimento de lideranças, com mais de 16 anos de experiência e fundador da Sahara Consulting. Apoia a Coalizão na criação de painéis e desenvolvimento.</p>
+          </div>
         </div>
         <div class="team-card">
-          <img src="assets/equipe/ciro-fleury.jpg" alt="Ciro de Carvalho Fleury">
-          <h3>Ciro de Carvalho Fleury</h3>
-          <div class="team-role">Estratégia · Voluntário</div>
-          <p>Executivo sênior e coach de lideranças, voluntário no grupo estratégico de avanço das agendas e protótipos.</p>
+          <img src="assets/equipe/fernanda-barbosa.jpg" alt="Fernanda Barbosa" loading="lazy">
+          <div>
+            <h3>Fernanda Barbosa</h3>
+            <div class="team-role">Especialista em educação · voluntária</div>
+            <p>Profissional de produto e marketing, com experiência em branding, estratégia de go-to-market e no setor educacional brasileiro; foi Head de Desenvolvimento Institucional, Marketing e Produto da MegaEdu.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="assets/equipe/mariana-valle.jpg" alt="Mariana Valle" loading="lazy">
+          <div>
+            <h3>Mariana Valle</h3>
+            <div class="team-role">Comunidade de prática · voluntária</div>
+            <p>Estrategista de comunicação e projetos; mestre em Políticas Públicas e Tecnologia pela Columbia University. Responde pela comunidade e pelo engajamento da rede.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="assets/equipe/aline-herrera.jpg" alt="Aline Herrera" loading="lazy">
+          <div>
+            <h3>Aline Herrera</h3>
+            <div class="team-role">Apoio estratégico</div>
+            <p>Bacharela em Relações Internacionais pela UFABC, com experiência em filantropia estratégica e gestão de projetos de impacto social. Apoia a gestão da Coalizão.</p>
+          </div>
+        </div>
+        <div class="team-card">
+          <img src="assets/equipe/fabiana-sobral.jpg" alt="Fabiana Sobral" loading="lazy">
+          <div>
+            <h3>Fabiana Sobral</h3>
+            <div class="team-role">Time operacional</div>
+            <p>Consultora em serviços administrativos e secretariado executivo virtual; apoia a secretaria executiva em todas as tarefas administrativas.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -499,7 +580,7 @@
   <!-- ============ CTA ============ -->
   <section class="section" id="participar">
     <div class="container">
-      <div class="cta-banner">
+      <div class="cta-banner cta-photo">
         <h2>Faça parte da Coalizão IA para Impacto</h2>
         <p>
           Organizações interessadas participam, gratuitamente, de um encontro coletivo de
@@ -558,6 +639,22 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    // Depois do prazo, o destaque da pesquisa passa a "coleta encerrada" e o aviso do topo some.
+    (function () {
+      var card = document.querySelector('.js-news');
+      if (!card) return;
+      var fim = new Date(card.dataset.ate + 'T23:59:59-03:00');
+      if (new Date() <= fim) return;
+      card.classList.add('is-closed');
+      card.querySelector('.js-news-tag').textContent = 'Pesquisa · Coleta encerrada';
+      card.querySelector('.js-news-deadline').innerHTML = 'Coleta encerrada<small>em 5 de dezembro de 2026</small>';
+      card.querySelector('.js-news-cta').textContent = 'Saiba mais sobre a pesquisa';
+      var pill = document.querySelector('.js-news-pill');
+      if (pill) pill.hidden = true;
+    })();
+  </script>
 
 </body>
 </html>
