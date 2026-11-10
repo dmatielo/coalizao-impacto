@@ -953,34 +953,44 @@ a { color: inherit; }
     var(--navy-deep);
 }
 /* Opções de foto do topo em avaliação (escolhidas pelo seletor do stage, js/stage.js) */
-.hero.hero-photo.topo-floresta,
-.hero.hero-photo.topo-rio,
-.hero.hero-photo.topo-folhas-rede,
-.hero.hero-photo.topo-represa {
+.hero.hero-photo.topo-agrofloresta,
+.hero.hero-photo.topo-plantio,
+.hero.hero-photo.topo-mutirao,
+.hero.hero-photo.topo-maos,
+.hero.hero-photo.topo-roda {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.hero.hero-photo.topo-floresta {
+.hero.hero-photo.topo-agrofloresta {
   background-image:
-    linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.62) 45%, rgba(6, 31, 49, 0.2) 100%),
-    url('../assets/fotos/topo-floresta.jpg');
+    linear-gradient(90deg, rgba(6, 31, 49, 0.92) 0%, rgba(6, 31, 49, 0.66) 42%, rgba(6, 31, 49, 0.2) 100%),
+    url('../assets/fotos/topo-agrofloresta.jpg');
+  background-position: center 35%;
 }
-.hero.hero-photo.topo-rio {
+.hero.hero-photo.topo-plantio {
   background-image:
-    linear-gradient(90deg, rgba(6, 31, 49, 0.92) 0%, rgba(6, 31, 49, 0.66) 45%, rgba(6, 31, 49, 0.25) 100%),
-    url('../assets/fotos/topo-rio.jpg');
+    linear-gradient(90deg, rgba(6, 31, 49, 0.92) 0%, rgba(6, 31, 49, 0.66) 42%, rgba(6, 31, 49, 0.2) 100%),
+    url('../assets/fotos/topo-plantio.jpg');
+  background-position: 70% 40%;
 }
-.hero.hero-photo.topo-folhas-rede {
+.hero.hero-photo.topo-mutirao {
   background-image:
-    linear-gradient(90deg, rgba(6, 31, 49, 0.88) 0%, rgba(6, 31, 49, 0.55) 45%, rgba(6, 31, 49, 0.15) 100%),
-    url('../assets/fotos/topo-folhas-rede.jpg');
+    linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.6) 42%, rgba(6, 31, 49, 0.15) 100%),
+    url('../assets/fotos/topo-mutirao.jpg');
 }
-.hero.hero-photo.topo-represa {
+.hero.hero-photo.topo-maos {
   background-image:
-    linear-gradient(90deg, rgba(6, 31, 49, 0.92) 0%, rgba(6, 31, 49, 0.62) 45%, rgba(6, 31, 49, 0.2) 100%),
-    url('../assets/fotos/topo-represa.jpg');
-  background-position: center 60%;
+    linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.6) 42%, rgba(6, 31, 49, 0.15) 100%),
+    url('../assets/fotos/topo-maos.jpg');
+  background-position: 75% center;
+}
+.hero.hero-photo.topo-roda {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.88) 0%, rgba(6, 31, 49, 0.55) 42%, rgba(6, 31, 49, 0.12) 100%),
+    url('../assets/fotos/topo-roda.jpg');
+  background-size: auto, 150% auto;
+  background-position: center, 0% 58%;
 }
 
 .stage-picker { font-weight: 400; margin-left: 0.75rem; }

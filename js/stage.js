@@ -14,10 +14,11 @@
   // Opções de foto do topo em avaliação; ?topo=<chave> na URL troca a imagem.
   var TOPOS = [
     ['', 'Terra (atual)'],
-    ['floresta', 'Floresta'],
-    ['rio', 'Rio'],
-    ['folhas-rede', 'Folhas e rede'],
-    ['represa', 'Represa']
+    ['agrofloresta', 'Agrofloresta'],
+    ['plantio', 'Plantio'],
+    ['mutirao', 'Mutirão'],
+    ['maos', 'Mãos'],
+    ['roda', 'Roda']
   ];
   var escolhido = new URLSearchParams(location.search).get('topo') || '';
 
