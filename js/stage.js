@@ -26,7 +26,13 @@
     ['praia', 'Praia (Jeri)'],
     ['por-do-sol', 'Pôr do sol (Salvador)'],
     ['rio-manaus', 'Rio (Manaus)'],
-    ['paraty', 'Paraty']
+    ['paraty', 'Paraty'],
+    ['oficina', 'Oficina'],
+    ['conversa', 'Conversa'],
+    ['fim-de-tarde', 'Fim de tarde'],
+    ['roda-grama', 'Roda na grama'],
+    ['projecao', 'Projeção'],
+    ['codigo', 'Código']
   ];
   var escolhido = new URLSearchParams(location.search).get('topo') || '';
 

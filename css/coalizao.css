@@ -1029,6 +1029,38 @@ a { color: inherit; }
     linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.6) 42%, rgba(6, 31, 49, 0.12) 100%),
     url('../assets/fotos/topo-paraty.jpg');
 }
+.hero.hero-photo.topo-oficina {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.92) 0%, rgba(6, 31, 49, 0.66) 42%, rgba(6, 31, 49, 0.2) 100%),
+    url('../assets/fotos/topo-oficina.jpg');
+}
+.hero.hero-photo.topo-conversa {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.6) 42%, rgba(6, 31, 49, 0.15) 100%),
+    url('../assets/fotos/topo-conversa.jpg');
+}
+.hero.hero-photo.topo-fim-de-tarde {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.55) 42%, rgba(6, 31, 49, 0.1) 100%),
+    url('../assets/fotos/topo-fim-de-tarde.jpg');
+}
+.hero.hero-photo.topo-roda-grama {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.6) 42%, rgba(6, 31, 49, 0.15) 100%),
+    url('../assets/fotos/topo-roda-grama.jpg');
+}
+.hero.hero-photo.topo-projecao {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.85) 0%, rgba(6, 31, 49, 0.45) 42%, rgba(6, 31, 49, 0.05) 100%),
+    url('../assets/fotos/topo-projecao.jpg');
+  background-position: 70% center;
+}
+.hero.hero-photo.topo-codigo {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.85) 0%, rgba(6, 31, 49, 0.45) 42%, rgba(6, 31, 49, 0.05) 100%),
+    url('../assets/fotos/topo-codigo.jpg');
+  background-position: 70% center;
+}
 
 .stage-picker { font-weight: 400; margin-left: 0.75rem; }
 .stage-picker a { margin: 0 0.3rem; }
