@@ -1046,6 +1046,24 @@ a { color: inherit; }
     url('../assets/fotos/topo-codigo.jpg');
   background-position: 70% center;
 }
+/* Prévia com marca d'água (Pulsar Imagens, foto paga): trocar pelo arquivo licenciado se for escolhida. */
+.hero.hero-photo.topo-solar {
+  background-image:
+    linear-gradient(90deg, rgb(6, 31, 49) 0%, rgb(6, 31, 49) 34%, rgba(6, 31, 49, 0.55) 58%, rgba(6, 31, 49, 0.05) 100%),
+    url('../assets/fotos/topo-solar.jpg');
+  background-color: rgb(6, 31, 49);
+  background-size: auto, auto 100%;
+  background-position: center, right center;
+}
+@media (max-width: 760px) {
+  .hero.hero-photo.topo-solar {
+    background-image:
+      linear-gradient(180deg, rgba(6, 31, 49, 0.88) 0%, rgba(6, 31, 49, 0.8) 100%),
+      url('../assets/fotos/topo-solar.jpg');
+    background-size: auto, cover;
+    background-position: center, 60% center;
+  }
+}
 
 .stage-picker { font-weight: 400; margin-left: 0.75rem; }
 .stage-picker a { margin: 0 0.3rem; }

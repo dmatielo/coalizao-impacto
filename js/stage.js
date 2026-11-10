@@ -29,7 +29,8 @@
     ['fim-de-tarde', 'Fim de tarde'],
     ['roda-grama', 'Roda na grama'],
     ['projecao', 'Projeção'],
-    ['codigo', 'Código']
+    ['codigo', 'Código'],
+    ['solar', 'Painel solar (Pulsar)']
   ];
   var escolhido = new URLSearchParams(location.search).get('topo') || '';
 
