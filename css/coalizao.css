@@ -952,6 +952,41 @@ a { color: inherit; }
     url('../assets/fotos/terra-noite.jpg') center / cover no-repeat,
     var(--navy-deep);
 }
+/* Opções de foto do topo em avaliação (escolhidas pelo seletor do stage, js/stage.js) */
+.hero.hero-photo.topo-floresta,
+.hero.hero-photo.topo-rio,
+.hero.hero-photo.topo-folhas-rede,
+.hero.hero-photo.topo-represa {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero.hero-photo.topo-floresta {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.62) 45%, rgba(6, 31, 49, 0.2) 100%),
+    url('../assets/fotos/topo-floresta.jpg');
+}
+.hero.hero-photo.topo-rio {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.92) 0%, rgba(6, 31, 49, 0.66) 45%, rgba(6, 31, 49, 0.25) 100%),
+    url('../assets/fotos/topo-rio.jpg');
+}
+.hero.hero-photo.topo-folhas-rede {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.88) 0%, rgba(6, 31, 49, 0.55) 45%, rgba(6, 31, 49, 0.15) 100%),
+    url('../assets/fotos/topo-folhas-rede.jpg');
+}
+.hero.hero-photo.topo-represa {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.92) 0%, rgba(6, 31, 49, 0.62) 45%, rgba(6, 31, 49, 0.2) 100%),
+    url('../assets/fotos/topo-represa.jpg');
+  background-position: center 60%;
+}
+
+.stage-picker { font-weight: 400; margin-left: 0.75rem; }
+.stage-picker a { margin: 0 0.3rem; }
+.stage-picker a[aria-current="true"] { font-weight: 700; text-decoration: none; border-bottom: 2px solid currentColor; }
+
 .hero-photo .hero-inner { max-width: 44rem; }
 .hero-photo h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.1; }
 .hero-photo .lead { margin: 0 0 1rem; }
