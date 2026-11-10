@@ -852,6 +852,20 @@ a { color: inherit; }
 
 .team-card h3 { margin: 0.2rem 0 0.15rem; font-size: 1.08rem; }
 
+.team-link { color: inherit; text-decoration: none; }
+.team-link .nowrap { white-space: nowrap; }
+.team-link:hover { color: var(--coral-dark); }
+.team-link:hover .ico-li { opacity: 1; }
+.ico-li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 0.4rem;
+  vertical-align: -1px;
+  fill: #0A66C2;
+  opacity: 0.85;
+}
+
 .team-card .team-role {
   color: var(--coral-dark);
   font-weight: 700;
