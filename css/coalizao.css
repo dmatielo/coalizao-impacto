@@ -953,11 +953,7 @@ a { color: inherit; }
     var(--navy-deep);
 }
 /* Opções de foto do topo em avaliação (escolhidas pelo seletor do stage, js/stage.js) */
-.hero.hero-photo.topo-agrofloresta,
-.hero.hero-photo.topo-plantio,
-.hero.hero-photo.topo-mutirao,
-.hero.hero-photo.topo-maos,
-.hero.hero-photo.topo-roda {
+.hero.hero-photo[class*="topo-"] {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -991,6 +987,47 @@ a { color: inherit; }
     url('../assets/fotos/topo-roda.jpg');
   background-size: auto, 150% auto;
   background-position: center, 0% 58%;
+}
+.hero.hero-photo.topo-canoa {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.6) 42%, rgba(6, 31, 49, 0.12) 100%),
+    url('../assets/fotos/topo-canoa.jpg');
+  background-position: center 55%;
+}
+.hero.hero-photo.topo-pescadores {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.62) 42%, rgba(6, 31, 49, 0.15) 100%),
+    url('../assets/fotos/topo-pescadores.jpg');
+}
+.hero.hero-photo.topo-jangadas {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.6) 42%, rgba(6, 31, 49, 0.12) 100%),
+    url('../assets/fotos/topo-jangadas.jpg');
+}
+.hero.hero-photo.topo-jangada {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.6) 42%, rgba(6, 31, 49, 0.12) 100%),
+    url('../assets/fotos/topo-jangada.jpg');
+}
+.hero.hero-photo.topo-praia {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.6) 42%, rgba(6, 31, 49, 0.12) 100%),
+    url('../assets/fotos/topo-praia.jpg');
+}
+.hero.hero-photo.topo-por-do-sol {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.88) 0%, rgba(6, 31, 49, 0.5) 42%, rgba(6, 31, 49, 0.1) 100%),
+    url('../assets/fotos/topo-por-do-sol.jpg');
+}
+.hero.hero-photo.topo-rio-manaus {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.85) 0%, rgba(6, 31, 49, 0.45) 42%, rgba(6, 31, 49, 0.1) 100%),
+    url('../assets/fotos/topo-rio-manaus.jpg');
+}
+.hero.hero-photo.topo-paraty {
+  background-image:
+    linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.6) 42%, rgba(6, 31, 49, 0.12) 100%),
+    url('../assets/fotos/topo-paraty.jpg');
 }
 
 .stage-picker { font-weight: 400; margin-left: 0.75rem; }

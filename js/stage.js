@@ -18,7 +18,15 @@
     ['plantio', 'Plantio'],
     ['mutirao', 'Mutirão'],
     ['maos', 'Mãos'],
-    ['roda', 'Roda']
+    ['roda', 'Roda'],
+    ['canoa', 'Canoa (Niterói)'],
+    ['pescadores', 'Pescadores'],
+    ['jangadas', 'Jangadas (Trairi)'],
+    ['jangada', 'Jangada (Jeri)'],
+    ['praia', 'Praia (Jeri)'],
+    ['por-do-sol', 'Pôr do sol (Salvador)'],
+    ['rio-manaus', 'Rio (Manaus)'],
+    ['paraty', 'Paraty']
   ];
   var escolhido = new URLSearchParams(location.search).get('topo') || '';
 
