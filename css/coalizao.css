@@ -970,11 +970,6 @@ a { color: inherit; }
     url('../assets/fotos/topo-plantio.jpg');
   background-position: 70% 40%;
 }
-.hero.hero-photo.topo-mutirao {
-  background-image:
-    linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.6) 42%, rgba(6, 31, 49, 0.15) 100%),
-    url('../assets/fotos/topo-mutirao.jpg');
-}
 .hero.hero-photo.topo-maos {
   background-image:
     linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.6) 42%, rgba(6, 31, 49, 0.15) 100%),
@@ -1028,16 +1023,6 @@ a { color: inherit; }
   background-image:
     linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.6) 42%, rgba(6, 31, 49, 0.12) 100%),
     url('../assets/fotos/topo-paraty.jpg');
-}
-.hero.hero-photo.topo-oficina {
-  background-image:
-    linear-gradient(90deg, rgba(6, 31, 49, 0.92) 0%, rgba(6, 31, 49, 0.66) 42%, rgba(6, 31, 49, 0.2) 100%),
-    url('../assets/fotos/topo-oficina.jpg');
-}
-.hero.hero-photo.topo-conversa {
-  background-image:
-    linear-gradient(90deg, rgba(6, 31, 49, 0.9) 0%, rgba(6, 31, 49, 0.6) 42%, rgba(6, 31, 49, 0.15) 100%),
-    url('../assets/fotos/topo-conversa.jpg');
 }
 .hero.hero-photo.topo-fim-de-tarde {
   background-image:
