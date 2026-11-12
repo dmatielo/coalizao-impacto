@@ -30,7 +30,8 @@
     ['roda-grama', 'Roda na grama'],
     ['projecao', 'Projeção'],
     ['codigo', 'Código'],
-    ['solar', 'Painel solar (Pulsar)']
+    ['solar', 'Painel solar (Pulsar)'],
+    ['solar-inteira', 'Painel solar, foto inteira']
   ];
   var escolhido = new URLSearchParams(location.search).get('topo') || '';
 
