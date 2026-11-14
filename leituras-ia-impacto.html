@@ -49,6 +49,44 @@
     .part-title { text-align: center; margin: 3.5rem 0 0.5rem; }
     .part-title:first-of-type { margin-top: 0; }
     .part-sub { text-align: center; color: var(--ink-soft); max-width: 44rem; margin: 0 auto 1rem; }
+
+    /* Navegação interna */
+    html { scroll-behavior: smooth; }
+    .papers [id], .part-title[id] { scroll-margin-top: 6rem; }
+    .jump { flex-direction: column; align-items: center; gap: 0.6rem; }
+    .jump-row { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; align-items: center; }
+    .jump-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--coral);
+      background: var(--white);
+      border-radius: var(--radius-pill);
+      padding: 0.45rem 0.8rem;
+      box-shadow: var(--shadow-card);
+    }
+    .jump-label a { all: unset; cursor: pointer; }
+    .jump .jump-row > a { padding: 0.45rem 1rem; font-size: 0.88rem; }
+    .to-top {
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      z-index: 40;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: var(--radius-pill);
+      padding: 0.55rem 1rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: var(--shadow-card);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .to-top.show { opacity: 1; pointer-events: auto; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .to-top { transition: none; } }
   </style>
 </head>
 <body>
@@ -70,7 +108,7 @@
     </nav>
   </header>
 
-  <section class="hero page-hero">
+  <section class="hero page-hero" id="topo">
     <div class="container">
       <span class="eyebrow">Lista de trabalho da equipe</span>
       <h1>O que a pesquisa diz sobre IA e impacto</h1>
@@ -86,6 +124,25 @@
       </svg>
     </div>
   </section>
+
+  <nav class="subnav container jump" aria-label="Nesta página">
+    <div class="jump-row">
+      <span class="jump-label"><a href="#brasil">Brasil</a></span>
+      <a href="#br-organizacoes">Organizações usando IA</a>
+      <a href="#br-causas">IA a serviço de causas</a>
+      <a href="#br-politicas">Políticas e olhar crítico</a>
+      <a href="#br-relatorios">Relatórios</a>
+    </div>
+    <div class="jump-row">
+      <span class="jump-label"><a href="#mundo">Mundo</a></span>
+      <a href="#mundo-panoramas">Panoramas</a>
+      <a href="#mundo-adocao">Como o setor está adotando</a>
+      <a href="#mundo-estrategia">Estratégia, valor e riscos</a>
+      <a href="#mundo-relatorio">Relatório</a>
+    </div>
+  </nav>
+
+  <a class="to-top" href="#topo">↑ Topo</a>
 
   <section class="section papers">
     <div class="container">
@@ -114,10 +171,10 @@
       </div>
 
       <!-- ===================== BRASIL ===================== -->
-      <h2 class="part-title">Brasil</h2>
+      <h2 class="part-title" id="brasil">Brasil</h2>
       <p class="part-sub">Trabalhos de pesquisadores brasileiros ou sobre o Brasil.</p>
 
-      <div class="macro">
+      <div class="macro" id="br-organizacoes">
         <div class="macro-head">
           <span class="num">Brasil 1</span>
           <h2>Organizações usando IA</h2>
@@ -152,7 +209,7 @@
         </div>
       </div>
 
-      <div class="macro">
+      <div class="macro" id="br-causas">
         <div class="macro-head">
           <span class="num">Brasil 2</span>
           <h2>IA a serviço de causas e do setor</h2>
@@ -187,7 +244,7 @@
         </div>
       </div>
 
-      <div class="macro">
+      <div class="macro" id="br-politicas">
         <div class="macro-head">
           <span class="num">Brasil 3</span>
           <h2>Políticas, direitos e olhar crítico</h2>
@@ -217,7 +274,7 @@
         </div>
       </div>
 
-      <div class="macro">
+      <div class="macro" id="br-relatorios">
         <div class="macro-head">
           <span class="num">Brasil 4</span>
           <h2>Fora das revistas acadêmicas</h2>
@@ -238,10 +295,10 @@
       </div>
 
       <!-- ===================== MUNDO ===================== -->
-      <h2 class="part-title">Mundo</h2>
+      <h2 class="part-title" id="mundo">Mundo</h2>
       <p class="part-sub">Os mais interessantes entre os internacionais. Títulos no original; resumos em português.</p>
 
-      <div class="macro">
+      <div class="macro" id="mundo-panoramas">
         <div class="macro-head">
           <span class="num">Mundo 1</span>
           <h2>Para começar: panoramas</h2>
@@ -261,7 +318,7 @@
         </div>
       </div>
 
-      <div class="macro">
+      <div class="macro" id="mundo-adocao">
         <div class="macro-head">
           <span class="num">Mundo 2</span>
           <h2>Como o setor está adotando</h2>
@@ -301,7 +358,7 @@
         </div>
       </div>
 
-      <div class="macro">
+      <div class="macro" id="mundo-estrategia">
         <div class="macro-head">
           <span class="num">Mundo 3</span>
           <h2>Estratégia, valor e riscos</h2>
@@ -331,7 +388,7 @@
         </div>
       </div>
 
-      <div class="macro">
+      <div class="macro" id="mundo-relatorio">
         <div class="macro-head">
           <span class="num">Mundo 4</span>
           <h2>Fora das revistas acadêmicas</h2>
@@ -356,6 +413,14 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var b = document.querySelector('.to-top');
+      function t() { b.classList.toggle('show', window.scrollY > 600); }
+      window.addEventListener('scroll', t, { passive: true }); t();
+    })();
+  </script>
 
 </body>
 </html>
