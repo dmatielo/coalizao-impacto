@@ -1147,6 +1147,26 @@ a { color: inherit; }
 .news-body .news-credit { font-size: 0.88rem; margin-bottom: 1.5rem; }
 .news-feature.is-closed .news-side { background: linear-gradient(150deg, var(--slate, #4A6178), var(--navy)); }
 
+/* Chamada para a newsletter, logo abaixo das novidades */
+.newsletter-strip {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1.5rem 2rem;
+  background: var(--lavanda-tint);
+  border: 1px solid var(--lavanda-border);
+  border-radius: var(--radius-lg);
+}
+.newsletter-strip .ico { width: 44px; height: 44px; flex-shrink: 0; color: var(--navy); stroke-width: 1.6; }
+.newsletter-strip h3 { font-size: 1.2rem; margin: 0 0 0.25rem; }
+.newsletter-strip p { margin: 0; color: var(--ink-soft); }
+.newsletter-strip .btn { margin-left: auto; flex-shrink: 0; }
+@media (max-width: 700px) {
+  .newsletter-strip { flex-direction: column; align-items: flex-start; padding: 1.5rem; }
+  .newsletter-strip .btn { margin-left: 0; }
+}
+
 /* ---------- Da Jornada à Coalizão: texto + foto ---------- */
 .journey {
   display: grid;
