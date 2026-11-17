@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletter — Coalizão IA para Impacto</title>
+  <meta name="description" content="Assine a newsletter da Coalizão IA para Impacto e receba as novidades sobre o uso de inteligência artificial no setor de impacto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/coalizao.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="canonical" href="https://iaparaimpacto.org.br/newsletter/">
+  <script src="../js/stage.js"></script>
+  <script>
+    // Domínio secundário redireciona para o oficial
+    if (/(^|\.)coalizaoiaparaimpacto\.org\.br$/.test(location.hostname)) {
+      location.replace('https://iaparaimpacto.org.br' + location.pathname + location.search + location.hash);
+    }
+  </script>
+  <style>
+    .nl-section { padding-top: 0; }
+    .nl-wrap {
+      max-width: 40rem;
+      margin: -4.5rem auto 0;
+      position: relative;
+      z-index: 2;
+    }
+    .nl-form {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      padding: 2.5rem;
+    }
+    .form-field { margin-bottom: 1.3rem; }
+    .form-field label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .req { color: var(--coral); }
+    .form-field input,
+    .form-field select {
+      width: 100%;
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid var(--lavanda-border);
+      border-radius: var(--radius-md);
+      padding: 0.75rem 1rem;
+    }
+    .form-field input:focus,
+    .form-field select:focus {
+      outline: 3px solid var(--lavanda-tint);
+      border-color: var(--lavanda);
+    }
+    .form-consent {
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      margin-bottom: 1.6rem;
+    }
+    .form-consent input { margin-top: 0.25rem; flex-shrink: 0; }
+    .form-note {
+      font-size: 0.85rem;
+      color: var(--ink-soft);
+      margin-top: 1rem;
+    }
+    .form-status {
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.4rem;
+      font-weight: 700;
+    }
+    .form-status.ok { background: rgba(27, 126, 90, 0.12); color: #1B7E5A; }
+    .form-status.err { background: var(--coral-tint); color: var(--coral-dark); }
+    .form-status a { color: inherit; }
+    .nl-form .btn { width: 100%; justify-content: center; }
+    .nl-hp { position: absolute; left: -5000px; }
+    @media (max-width: 600px) {
+      .nl-form { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ Header ============ -->
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="../index.html" aria-label="Coalizão IA para Impacto — página inicial">
+        <img src="../assets/branco_logo_coalizao-ia-para-impacto.png" alt="Coalizão IA para Impacto">
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#sobre">Sobre</a></li>
+        <li><a href="../index.html#organizacoes">Para Organizações</a></li>
+        <li><a href="../index.html#como-atuamos">Como Atuamos</a></li>
+        <li><a href="../barreiras.html">Diagnóstico</a></li>
+        <li><a href="../index.html#financiadores">Para Financiadores</a></li>
+        <li><a href="../contato.html">Contato</a></li>
+      </ul>
+      <a class="btn btn-primary" href="../contato.html">Participar</a>
+    </nav>
+  </header>
+
+  <!-- ============ Hero compacto ============ -->
+  <section class="hero" style="padding: 3rem 0 6rem;">
+    <div class="container">
+      <span class="eyebrow">Newsletter</span>
+      <h1 style="font-size: clamp(1.8rem, 4vw, 2.8rem);">Receba as novidades da Coalizão</h1>
+      <p class="lead">
+        Notícias da Coalizão IA para Impacto, convites para as nossas atividades e
+        conteúdos sobre o uso estratégico, ético e inclusivo da inteligência
+        artificial no setor de impacto. É gratuita, e você pode cancelar quando quiser.
+      </p>
+    </div>
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none">
+        <path d="M0,40 C240,70 480,0 720,20 C960,40 1200,70 1440,30 L1440,70 L0,70 Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ Formulário (Mailchimp) ============ -->
+  <section class="section nl-section">
+    <div class="container">
+      <div class="nl-wrap">
+        <!-- Sem JavaScript, o envio vai direto para a página do Mailchimp. Com JavaScript, a resposta aparece aqui. -->
+        <form class="nl-form" id="nl-form" method="post"
+          action="https://iaparaimpacto.us13.list-manage.com/subscribe/post?u=c76c7bfe2f198cc573fbbb931&amp;id=1303a2f4ac&amp;f_id=00f5c1e1f0">
+
+          <div class="form-status ok" id="nl-ok" role="status" hidden></div>
+          <div class="form-status err" id="nl-err" role="alert" hidden></div>
+
+          <div class="form-field">
+            <label for="mce-EMAIL">E-mail <span class="req">*</span></label>
+            <input type="email" id="mce-EMAIL" name="EMAIL" required autocomplete="email" inputmode="email">
+          </div>
+
+          <div class="form-field">
+            <label for="mce-FNAME">Nome <span class="req">*</span></label>
+            <input type="text" id="mce-FNAME" name="FNAME" required autocomplete="given-name">
+          </div>
+
+          <div class="form-field">
+            <label for="mce-MMERGE8">Organização <span class="req">*</span></label>
+            <input type="text" id="mce-MMERGE8" name="MMERGE8" required autocomplete="organization">
+          </div>
+
+          <div class="form-field">
+            <label for="mce-group47">Tipo de organização</label>
+            <select id="mce-group47" name="group[47]">
+              <option value="">Selecione</option>
+              <option value="1">ONG / OSC</option>
+              <option value="2">Negócio de Impacto</option>
+              <option value="4">Filantropia</option>
+              <option value="8">Fundo de Investimento</option>
+              <option value="16">Governo</option>
+              <option value="32">Academia e Pesquisa</option>
+              <option value="64">Setor Privado</option>
+              <option value="128">Organização comunitária</option>
+              <option value="256">Outro</option>
+            </select>
+          </div>
+
+          <label class="form-consent">
+            <input type="checkbox" name="group[48]" value="512" required>
+            <span>
+              Aceito receber a newsletter e concordo com o uso dos meus dados (nome e e-mail)
+              para esse fim. <span class="req">*</span>
+            </span>
+          </label>
+
+          <!-- Anti-robô do Mailchimp: pessoas não veem este campo; não remover -->
+          <div class="nl-hp" aria-hidden="true">
+            <input type="text" name="b_c76c7bfe2f198cc573fbbb931_1303a2f4ac" tabindex="-1" value="" autocomplete="off">
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="nl-btn">Quero receber</button>
+
+          <p class="form-note">
+            Campos marcados com <span class="req">*</span> são obrigatórios. Os dados ficam
+            na plataforma de envio (Mailchimp) e são usados só para a newsletter; cada
+            edição traz um link para cancelar a assinatura.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img class="footer-logo" src="../assets/branco_logo_coalizao-ia-para-impacto.png" alt="Coalizão IA para Impacto">
+          <p style="font-size:0.95rem;max-width:28rem;">
+            Uma articulação brasileira para destravar o uso estratégico, ético e
+            inclusivo da inteligência artificial no setor de impacto.
+          </p>
+        </div>
+        <div>
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="../index.html#sobre">Sobre</a></li>
+            <li><a href="../index.html#como-atuamos">Como Atuamos</a></li>
+            <li><a href="../index.html#organizacoes">Para Organizações</a></li>
+            <li><a href="../index.html#financiadores">Para Financiadores</a></li>
+            <li><a href="../index.html#quem-participa">Quem Participa</a></li>
+            <li><a href="../index.html#time">Time</a></li>
+            <li><a href="../contato.html">Contato</a></li>
+            <li><a href="./" aria-current="page">Newsletter</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Diagnóstico</h4>
+          <ul>
+            <li><a href="../barreiras.html">Barreiras</a></li>
+            <li><a href="../alavancas.html">Alavancas</a></li>
+            <li><a href="../recomendacoes.html">Recomendações</a></li>
+            <li><a href="../relatorio.html">Relatório final</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ecossistema</h4>
+          <ul>
+            <li><a href="https://jornadadeimpacto.ia.br/" target="_blank" rel="noopener">Cérebro da Jornada</a></li>
+            <li><a href="https://jornadadeimpacto.ia.br/" target="_blank" rel="noopener">Jornada IA para Impacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2026 Coalizão IA para Impacto · Continuidade da Jornada IA para Impacto
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Envia para o Mailchimp pelo endereço post-json (JSONP), para mostrar a resposta aqui
+    // mesmo, em português, sem carregar o script do Mailchimp (que depende de jQuery).
+    (function () {
+      var form = document.getElementById('nl-form');
+      var ok = document.getElementById('nl-ok');
+      var err = document.getElementById('nl-err');
+      var btn = document.getElementById('nl-btn');
+      var FORM_MC = 'https://iaparaimpacto.us13.list-manage.com/subscribe?u=c76c7bfe2f198cc573fbbb931&id=1303a2f4ac';
+
+      function show(el, text, link) {
+        ok.hidden = true; err.hidden = true;
+        el.textContent = text;
+        if (link) {
+          var a = document.createElement('a');
+          a.href = link.href; a.textContent = link.text;
+          el.appendChild(document.createTextNode(' '));
+          el.appendChild(a);
+        }
+        el.hidden = false;
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+
+      function done() { btn.disabled = false; btn.textContent = 'Quero receber'; }
+
+      function erro(msg) {
+        var m = (msg || '').toLowerCase();
+        if (m.indexOf('already subscribed') > -1) {
+          show(ok, 'Este e-mail já está inscrito na newsletter. Obrigado!');
+        } else if (m.indexOf('too many') > -1) {
+          show(err, 'Muitas tentativas com este e-mail. Tente de novo mais tarde, por favor.');
+        } else if (m.indexOf('email') > -1 || m.indexOf('e-mail') > -1) {
+          show(err, 'Confira o e-mail digitado e tente de novo.');
+        } else {
+          show(err, 'Não foi possível concluir a inscrição agora. Tente de novo ou use o',
+            { href: FORM_MC, text: 'formulário no Mailchimp.' });
+        }
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        btn.disabled = true; btn.textContent = 'Enviando...';
+
+        var cb = 'mcCb' + Date.now();
+        var params = new URLSearchParams(new FormData(form));
+        params.set('c', cb);
+        var url = form.action.replace('/subscribe/post?', '/subscribe/post-json?') + '&' + params.toString();
+        var s = document.createElement('script');
+        var timer = setTimeout(function () { limpa(); done(); erro(''); }, 15000);
+
+        function limpa() { clearTimeout(timer); delete window[cb]; if (s.parentNode) s.parentNode.removeChild(s); }
+
+        window[cb] = function (res) {
+          limpa(); done();
+          if (res && res.result === 'success') {
+            form.reset();
+            if (/confirm/i.test(res.msg || '')) {
+              show(ok, 'Quase lá! Enviamos um e-mail para você confirmar a inscrição. Confira também a caixa de spam.');
+            } else {
+              show(ok, 'Inscrição feita! Você vai receber a próxima edição da newsletter da Coalizão.');
+            }
+          } else {
+            erro(res && res.msg);
+          }
+        };
+        s.onerror = function () { limpa(); done(); erro(''); };
+        s.src = url;
+        document.body.appendChild(s);
+      });
+    })();
+  </script>
+
+</body>
+</html>
